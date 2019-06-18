@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/fr.html"><img src="../../GCWeb/assets/sig-blk-fr.svg" alt=""><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/fr.html" property="url"><img src="../../GCWeb/assets/sig-blk-fr.svg" alt="" property="logo"><span class="wb-inv" property="name"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Recherche</h2>
@@ -104,7 +106,7 @@
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Lecteur multimédia - YouTube</h1>
 <span class="wb-prettify all-pre hide"></span>
 <div class="row">
@@ -137,6 +139,42 @@
 </details>
 </section>
 </div>
+<h2>Vidéo Youtube dans une fenêtre modale (lightbox)</h2>
+<p><a class="wb-lbx lbx-modal lbx-iframe" href="#video-youtube">Ouvrir le vidéo</a></p>
+<section id="video-youtube" class="mfp-hide modal-dialog modal-content overlay-def">
+<header class="modal-header">
+<h3>Vidéo Youtube dans une fenêtre modale (lightbox)</h3>
+</header>
+<div class="modal-body">
+<figure class="wb-mltmd" data-wb-mltmd='{"shareUrl": "http://www.youtube.com/watch?v=LLg-UsTr7us"}'>
+<video title="Suspect">
+<source type="video/youtube" src="http://www.youtube.com/watch?v=LLg-UsTr7us">
+</video>
+<figcaption>
+<p>Suspect (<a href="http://canadiensensante.gc.ca/video/suspect-fra.php#trans">Transcription</a>)</p>
+</figcaption>
+</figure>
+</div>
+</section>
+<details>
+<summary>View code</summary>
+<pre><code>&lt;p&gt;&lt;a class="wb-lbx lbx-modal lbx-iframe" href="#video-youtube"&gt;Ouvrir le vidéo&lt;/a&gt;&lt;/p&gt;
+&lt;section id="video-youtube" class="mfp-hide modal-dialog modal-content overlay-def"&gt;
+	&lt;header class="modal-header"&gt;
+		&lt;h3&gt;Vidéo Youtube dans une fenêtre modale (lightbox)&lt;/h3&gt;
+	&lt;/header&gt;
+	&lt;div class="modal-body"&gt;
+		&lt;figure class="wb-mltmd" data-wb-mltmd='{"shareUrl": "http://www.youtube.com/watch?v=LLg-UsTr7us"}'&gt;
+			&lt;video title="Suspect"&gt;
+				&lt;source type="video/youtube" src="http://www.youtube.com/watch?v=LLg-UsTr7us" /&gt;
+			&lt;/video&gt;
+			&lt;figcaption&gt;
+				&lt;p&gt;Suspect (&lt;a href="http://canadiensensante.gc.ca/video/suspect-fra.php#trans"&gt;Transcription&lt;/a&gt;)&lt;/p&gt;
+			&lt;/figcaption&gt;
+		&lt;/figure&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+</details>
 <div class="pagedetails">
 <div class="row">
 <div class="col-sm-6 col-md-5 col-lg-4">

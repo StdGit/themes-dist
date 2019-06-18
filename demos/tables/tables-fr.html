@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/fr.html"><img src="../../GCWeb/assets/sig-blk-fr.svg" alt=""><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/fr.html" property="url"><img src="../../GCWeb/assets/sig-blk-fr.svg" alt="" property="logo"><span class="wb-inv" property="name"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Recherche</h2>
@@ -104,7 +106,7 @@
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Tables</h1>
 <section>
 <h2>Exemple</h2>
@@ -1189,6 +1191,21 @@
 <li class="checkbox"><label for="dt_location13"><input type="checkbox" id="dt_location13" name="dt_location" data-column="5" value="Prince Edward Island"> Prince Edward Island</label></li>
 </ul>
 </fieldset>
+<details>
+<summary><h6>Advanced Options</h6></summary>
+<div class="radio">
+<label for="advanced_options1_1"><input type="radio" name="advanced_options1" id="advanced_options1_1" data-aopts='{"type": "any", "column": "5"}' checked=checked>Any</label>
+</div>
+<div class="radio">
+<label for="advanced_options1_2"><input type="radio" name="advanced_options1" id="advanced_options1_2" data-aopts='{"type": "both", "column": "5"}'>Both</label>
+</div>
+<div class="radio">
+<label for="advanced_options1_3"><input type="radio" name="advanced_options1" id="advanced_options1_3" data-aopts='{"type": "either", "column": "5"}'>Either</label>
+</div>
+<div class="radio">
+<label for="advanced_options1_4"><input type="radio" name="advanced_options1" id="advanced_options1_4" data-aopts='{"type": "and", "column": "5"}'>And</label>
+</div>
+</details>
 </div>
 <div class="row">
 <div class="col-xs-6">

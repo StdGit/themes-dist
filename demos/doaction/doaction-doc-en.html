@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/en.html"><img src="../../GCWeb/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/en.html" property="url"><img src="../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Search</h2>
@@ -104,7 +106,7 @@
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Do action - Documentation</h1>
 <div class="wb-prettify all-pre"></div>
 <section>
@@ -233,6 +235,7 @@
 <li>addClass</li>
 <li>run</li>
 <li>removeClass</li>
+<li>mapfilter</li>
 </ul>
 </td>
 <td><code>data-wb-doaction='{ "action": "<em>[Name of the action]</em>" }</code></td>
@@ -250,6 +253,8 @@
 <dd>Add a class to an element</dd>
 <dt>removeClass</dt>
 <dd>Remove a class to an element</dd>
+<dt>mapfilter</dt>
+<dd>Apply a geomap filter</dd>
 </dl>
 </td>
 </tr>
@@ -349,6 +354,7 @@
 <li>run</li>
 <li>addClass</li>
 <li>removeClass</li>
+<li>mapfilter</li>
 </ul>
 </td>
 <td><code>data-wb-doaction='{ "action": "ajax", "target": "[an ID]", "trgbefore": <em>true</em> } }'</code></td>
@@ -372,6 +378,7 @@
 <li>run</li>
 <li>addClass</li>
 <li>removeClass</li>
+<li>mapfilter</li>
 </ul>
 </td>
 <td><code>data-wb-doaction='{ "action": "ajax", "target": "[an ID]", "trggroup": "<em>[a name]</em>" } }'</code></td>
@@ -386,6 +393,7 @@
 <li>patch</li>
 <li>addClass</li>
 <li>removeClass</li>
+<li>mapfilter</li>
 </ul>
 </td>
 <td><code>data-wb-doaction='{ "action": "tblfilter", "source": "#jQuerySelector" }'</code></td>
@@ -545,6 +553,44 @@
 <dd>The patches will be ignored at the next patches update by the JSON manager.</dd>
 <dt>true:</dt>
 <dd>The patches will be cumulative for the next patches updated by the JSON manager, like from instruction received by fieldflow.</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td>filter</td>
+<td><p>Filter type</p>
+<p>Available for:</p>
+<ul>
+<li>mapfilter</li>
+</ul>
+</td>
+<td><code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "aoi", "value"="64 -10 34 -177" } }'</code><br>
+<code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "layout", "value"="Layout name" } }'</code></td>
+<td>
+<dl>
+<dt><code>aoi</code>:</dt>
+<dd>Area Of Interest (zoom filtering) and the configuration "value" contains a 4 cardinal point or Well-Known Text (WKT) string.</dd>
+<dt><code>layout</code>:</dt>
+<dd>Layout (overlay filtering) and the configuration "value" contains the name of that layer as displayed in the legend if any or an empty string to select all.</dd>
+</dl>
+</td>
+</tr>
+<tr>
+<td>value</td>
+<td><p>The value for the action</p>
+<p>Available for:</p>
+<ul>
+<li>mapfilter</li>
+</ul>
+</td>
+<td><code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "aoi", "value"="64 -10 34 -177" } }'</code><br>
+<code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "layout", "value"="Layout name" } }'</code></td>
+<td>
+<dl>
+<dt><code>&lt;string&gt;</code> (aoi):</dt>
+<dd>4 cardinal point or Well-Known Text (WKT) string for filter set to the Area Of Interest (zoom filtering).</dd>
+<dt><code>&lt;string&gt;</code> (layer):</dt>
+<dd>The name of that layer as displayed in the legend or an empty string to select all for filter set to Layout (overlay filtering).</dd>
 </dl>
 </td>
 </tr>

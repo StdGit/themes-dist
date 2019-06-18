@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/fr.html"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt=""><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/fr.html" property="url"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt="" property="logo"><span class="wb-inv" property="name"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Recherche</h2>
@@ -107,7 +109,7 @@
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Contenu superposé</h1>
 <p>
 <a class="btn btn-primary" href="https://github.com/wet-boew/GCWeb/issues/new?title=Contenu%20superpos%C3%A9:%20">Questions ou commentaires?</a>
@@ -237,6 +239,12 @@
 <td>Only work for left panel, right panel, top bar and bottom bar. Add the class <code>no-print</code> to the <code>&lt;section&gt;</code> element of the overlay.</td>
 <td><code>no-print</code></td>
 </tr>
+<tr>
+<td>Add an overlay background</td>
+<td>Stand up the overlay dialog by adding a black overlay background.</td>
+<td>To be used with middle overlay.</td>
+<td><code>overlay-bg</code></td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -272,9 +280,29 @@
 <td>Used to manually open an overlay (event must be triggered on the <code>section</code> element of the overlay).</td>
 </tr>
 <tr>
+<td><code>opened.wb-overlay</code></td>
+<td>Triggered automatically after an overlay is open.</td>
+<td>Used to identify when an overlay has been opened (target of the event)
+<pre><code>$( document ).on( "opened.wb-overlay", ".wb-overlay", function( event ) {
+});</code></pre>
+<pre><code>$( ".wb-overlay" ).on( "opened.wb-overlay", function( event ) {
+});</code></pre>
+</td>
+</tr>
+<tr>
 <td><code>close.wb-overlay</code></td>
 <td>Triggered manually (e.g., <code>$( ".wb-overlay" ).trigger( "close.wb-overlay" );</code>).</td>
 <td>Used to manually close an overlay (event must be triggered on the <code>section</code> element of the overlay).</td>
+</tr>
+<tr>
+<td><code>closed.wb-overlay</code></td>
+<td>Triggered automatically after an overlay is close.</td>
+<td>Used to identify when an overlay has been closed (target of the event)
+<pre><code>$( document ).on( "closed.wb-overlay", ".wb-overlay", function( event ) {
+});</code></pre>
+<pre><code>$( ".wb-overlay" ).on( "closed.wb-overlay", function( event ) {
+});</code></pre>
+</td>
 </tr>
 <tr>
 <td><code>wb-ready.wb</code> (v4.0.5+)</td>
