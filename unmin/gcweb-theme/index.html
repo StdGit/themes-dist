@@ -24,7 +24,7 @@
 		<link href="../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../GCWeb/css/ie8-theme.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -93,7 +93,7 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 			</ul>
@@ -127,6 +127,7 @@ container
 	<li><a href="#gcweb-v5">GCWeb Canada.ca theme) visual update - V5</a></li>
 	<li><a href="#evaluation">Evaluation and report</a></li>
 	<li><a href="#special-notes">Special notes</a></li>
+	<li><a href="#static-header-footer">Static header and footer</a></li>
 	<li><a href="#customGCWebVariant">Customizing GCWeb for your implementation variant</a></li>
 	<li><a href="#testCases">Test cases</a></li>
 	<li><a href="release/index-en.html">Version history (Release notes)</a></li>
@@ -139,6 +140,65 @@ container
 	<li>French: <a href="https://cdn.canada.ca/gcweb-cdn-live/sitemenu/sitemenu-v5-fr.html">https://cdn.canada.ca/gcweb-cdn-live/sitemenu/sitemenu-v5-fr.html</a></li>
 </ul>
 
+<h2 id="static-header-footer">Static header and footer</h2>
+<p>Static HTML header and footer that you can just copy and paste in your project, with slight modifications e.g. metadata.</p>
+<table class="table table-bordered table-hover">
+<thead>
+<tr>
+<td></td>
+<th>Bootstrap 3</th>
+<th>Bootstrap 4 (experimental)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<th>Example</th>
+	<td>
+		<ul class="mrgn-bttm-0">
+			<li><a href="static-header-footer/bootstrap-3.html">English</a></li>
+		</ul>
+	</td>
+	<td>
+		<ul class="mrgn-bttm-0">
+			<li><a href="static-header-footer/bootstrap-4.html">English</a></li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<th>Header</th>
+	<td><a href="https://github.com/wet-boew/GCWeb/blob/master/site/pages/gcweb-theme/static-header-footer/bootstrap-3.html#L1-L89" rel="external">Source code, line 1 to 89</a></td>
+	<td><a href="https://github.com/wet-boew/GCWeb/blob/master/site/pages/gcweb-theme/static-header-footer/bootstrap-4.html#L1-L66" rel="external">Source code, line 1 to 66</a></td>
+</tr>
+<tr>
+	<th>Footer</th>
+	<td><a href="https://github.com/wet-boew/GCWeb/blob/master/site/pages/gcweb-theme/static-header-footer/bootstrap-3.html#L187-L233" rel="external">Source code, line 187 to 233</a></td>
+	<td><a href="https://github.com/wet-boew/GCWeb/blob/master/site/pages/gcweb-theme/static-header-footer/bootstrap-4.html#L84-L122" rel="external">Source code, line 84 to 122</a></td>
+</tr>
+<tr>
+	<th>Notes</th>
+	<td>
+		<ul>
+			<li>Includes WET scripts</li>
+			<li>Includes GCWeb styles</li>
+			<li>Needs to have assets paths updated to fit your folder structure</li>
+		</ul>
+	</td>
+	<td>
+		<ul>
+			<li>Does not include WET scripts</li>
+			<li>Does not include GCWeb styles</li>
+			<li>Does not include the menu</li>
+			<li>Relies on an experimental stylesheet for a Canada.ca look</li>
+		</ul>
+	</td>
+</tr>
+<tr>
+	<th>Special assets</th>
+	<td><a href="https://github.com/wet-boew/GCWeb/archive/v5.1.zip" rel="external">Download GCWeb</a></td>
+	<td><a href="https://github.com/wet-boew/GCWeb/blob/master/site/pages/gcweb-theme/static-header-footer/site-assets/x-bootstrap-4.css" rel="external">Download experimental CSS</a></td>
+</tr>
+</tbody>
+</table>
 
 <h2 id="gcweb-v5">GCWeb Canada.ca theme) visual update - V5</h2>
 
@@ -274,7 +334,7 @@ container
 	<li><q>Though present in early (2002) drafts of CSS3 Fonts, font-smooth has been removed from this specification and is currently not on the standard track.</q> - <a href="https://caniuse.com/#search=font-smoothing">https://caniuse.com/#search=font-smoothing</a></li>
 	<li><q>This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</q> - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth">https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth</a></li>
 	<li>Outdated working draft - W3C CSS font - <a href="https://www.w3.org/TR/WD-font/#font-smooth">https://www.w3.org/TR/WD-font/#font-smooth</a></li>
-	<li>See also: <a href="http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/">Please Stop "Fixing" Font Smoothing – UsabilityPost</a></li>
+	<li>See also: <a href="https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/">Please Stop "Fixing" Font Smoothing – UsabilityPost</a></li>
 	<li>See also: <a href="https://www.zachleat.com/web/font-smooth/">Laissez-faire font smoothing and anti-aliasing</a></li>
 </ul>
 <p>The above article makes reference that playing with the anti-aliasing feature make the font more blury for use, so less readable.</p>
@@ -419,7 +479,7 @@ container
 		</div>
 		<dl id="wb-dtmd">
 			<dt>Date modified:&#32;</dt>
-			<dd><time property="dateModified">2019-04-12</time></dd>
+			<dd><time property="dateModified">2019-09-12</time></dd>
 		</dl>
 	</div>
 </main>

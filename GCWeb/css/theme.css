@@ -2,7 +2,7 @@
 /*!
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
- * v6.0.0-development - 2019-08-06
+ * v6.0.0-development - 2019-10-08
  *
  */
 /*
@@ -27,7 +27,7 @@ Left menu variables
  * If there is a Bootstrap variable not shown here that you want to override, go to "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables" to view the variables that you can override. Simply copy and paste the variable and its applicable section (if applicable) from the Bootstrap file into this override file and override the variables as applicable.
  */
 /*!
- * GLYPHICONS Halflings for Twitter Bootstrap by GLYPHICONS.com | Licensed under http://www.apache.org/licenses/LICENSE-2.0
+ * GLYPHICONS Halflings for Twitter Bootstrap by GLYPHICONS.com | Licensed under https://www.apache.org/licenses/LICENSE-2.0
  */
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
@@ -5893,6 +5893,24 @@ a {
   color: #959595; }
 
 /*
+ *	Abbreviations with title attributes
+ *	Workaround for abbreviations with titles using solid underlines in IE11/Edge in Bootstrap 3.4.0 (via normalize.css 4.0.1-8.0.1):
+ *	- Use a dotted underline in browsers that support it (e.g. Firefox, Chrome, etc...)
+ *	- Fallback on a dotted bottom border in browsers that don't support it (e.g. IE11, Edge, etc...)
+ *	Source: https://github.com/necolas/normalize.css/pull/738#issuecomment-387549760
+ *	Created by: @mattbrundage
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+  text-decoration: none; }
+
+@supports ((-webkit-text-decoration: underline dotted) or (text-decoration: underline dotted)) {
+  abbr[title] {
+    border-bottom: 0;
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted; } }
+
+/*
  *	Override the design of alerts and labels
  */
 .alert, .label {
@@ -6040,9 +6058,17 @@ blockquote {
  *	Default should be representative of the expected length of input.
  *	Full width should be only for cases when the expected length of input is
  *	greater than the available width.
+ *  height:37px; rule of Bootstrap was overwritten by height: auto; first
+ *  then a min-height specified, in order to address the issue #8492. July 2019.
  */
+input[type=button], input[type=reset], input[type=submit] {
+  height: auto;
+  min-height: 37px; }
+
 .form-control {
+  height: auto;
   max-width: 100%;
+  min-height: 37px;
   width: auto; }
 
 /*
@@ -6401,11 +6427,11 @@ q:before, q:after {
   white-space: nowrap; }
 
 /*
-* Based upon jQuery Mobile Transitions (http://jquerymobile.com)
+* Based upon jQuery Mobile Transitions (https://jquerymobile.com)
 *
 * Copyright 2010, 2013 jQuery Foundation, Inc. and other contributors
 * Released under the MIT license.
-* http://jquery.org/license
+* https://jquery.org/license
 *
 */
 .pop.in, .fade.in, .fade.reverse.out {
@@ -10917,7 +10943,7 @@ header {
   #wb-glb-mn ul {
     min-width: 150px; }
     #wb-glb-mn ul.chvrn {
-      background: #335075;
+      background: #26374a;
       display: inline-block;
       float: right;
       height: 2.75em; }
@@ -10989,8 +11015,8 @@ h2.hme-banner-bg {
  WET button overwrites
  */
 body .btn-primary {
-  background-color: #335075;
-  border-color: #335075; }
+  background-color: #26374a;
+  border-color: #26374a; }
 
 .btn {
   font-family: Lato, sans-serif; }
@@ -11268,7 +11294,7 @@ main {
  * Overlay-specific overrides
  */
 .overlay-def header {
-  background: #335075; }
+  background: #26374a; }
 
 /* Profile on page-type-navigation pages
  * was: ".secondary" which are now deprecated */
@@ -11391,7 +11417,7 @@ main {
   padding-bottom: 2em; }
   #wb-sec h3 {
     border: 1px solid #ddd;
-    border-bottom: 5px solid #335075;
+    border-bottom: 5px solid #26374a;
     font-size: 1.1em;
     margin: 15px 0 1px;
     padding: 15px; }
@@ -11413,7 +11439,7 @@ main {
       #wb-sec .list-group a.list-group-item.wb-navcurr {
         cursor: text; }
         #wb-sec .list-group a.list-group-item.wb-navcurr[href]:hover {
-          background-color: #335075; }
+          background-color: #26374a; }
     #wb-sec .list-group .list-group .list-group-item {
       background-color: #e6e5e5;
       color: black;
@@ -11483,6 +11509,7 @@ a.shr-opn, a.shr-opn:hover {
     background-color: #26374a;
     border: 1px solid #26374a;
     color: #fff;
+    margin-left: 0;
     padding: .5em 1em;
     text-transform: uppercase; }
   .gcweb-menu button[aria-haspopup=true]:hover,
@@ -11624,7 +11651,7 @@ a.shr-opn, a.shr-opn:hover {
  */
 /* GCWeb version 1.0 megamenu */
 #wb-sm {
-  background: #335075; }
+  background: #26374a; }
   #wb-sm .menu {
     display: table;
     margin-bottom: 0;
@@ -11735,9 +11762,9 @@ a.shr-opn, a.shr-opn:hover {
   #mb-pnl .mfp-close {
     top: .55em; }
   #mb-pnl .srch-pnl form button {
-    background-color: #335075;
+    background-color: #26374a;
     border: 0;
-    border-color: #335075;
+    border-color: #26374a;
     border-radius: 0;
     position: relative; }
     #mb-pnl .srch-pnl form button:hover, #mb-pnl .srch-pnl form button:focus, #mb-pnl .srch-pnl form button:active {
@@ -12016,7 +12043,7 @@ a.shr-opn, a.shr-opn:hover {
     background-color: #f5f5f5;
     text-decoration: none; }
   .toc li .list-group-item.active, .toc li .list-group-item.active:focus, .toc li .list-group-item.active:hover {
-    background-color: #335075;
+    background-color: #26374a;
     color: #fff;
     cursor: auto;
     text-decoration: none;
@@ -12736,12 +12763,15 @@ table.nws-tbl > thead > tr > th {
   .overlay-def .modal-header {
     background: #2e5274; }
   .wb-sl {
-    background: #335075;
+    background: #26374a;
     color: #fff;
     font-weight: 700; }
     .wb-sl:focus {
       color: #fff;
       text-decoration: none; }
+    .wb-sl:hover {
+      background-color: #444;
+      color: #fff; }
   /*
  * Carousel-specific overrides
  */
@@ -12823,9 +12853,8 @@ table.nws-tbl > thead > tr > th {
   WET-BOEW
   @title: Extra-small view and under (screen only)
  */
-  .gcweb-menu .container {
-    padding-left: 15px;
-    padding-right: 15px; }
+  .gcweb-menu button[aria-haspopup=true] {
+    margin-left: 15px !important; }
   /*
   Pagination
   @title: Extra-small view and under (screen only)
@@ -12896,14 +12925,14 @@ table.nws-tbl > thead > tr > th {
   .dshbrd details {
     display: block; }
     .dshbrd details summary {
-      background: #335075;
+      background: #26374a;
       color: #fff;
       font-size: 1em;
       margin-top: 5px;
       max-height: 999px;
       padding: 1em; }
     .dshbrd details .cntnt {
-      border: 1px solid #335075;
+      border: 1px solid #26374a;
       padding: 15px; }
   /*
   WET-BOEW
@@ -12938,11 +12967,16 @@ table.nws-tbl > thead > tr > th {
     /* Arrow for menu item with submenu */
     /* Menu text style */
     /* Mobile - Third level */ }
+    .gcweb-menu .container {
+      padding: 0;
+      width: 100%; }
     .gcweb-menu [role=menu] {
       position: static; }
-    .gcweb-menu button[aria-haspopup=true][aria-expanded=true] + [role=menu] {
-      border-right: #eee solid 1px;
-      width: 95%; }
+    .gcweb-menu button[aria-haspopup=true] {
+      margin-left: calc( 50% - 360px);
+      /* 360px is half the container, minus the padding */ }
+      .gcweb-menu button[aria-haspopup=true][aria-expanded=true] + [role=menu] {
+        border-right: #eee solid 1px; }
     .gcweb-menu [role=menuitem] {
       width: auto; }
     .gcweb-menu [role=menu] [role=menu] li:first-child [role=menuitem] {
@@ -12995,12 +13029,18 @@ table.nws-tbl > thead > tr > th {
     .gcweb-menu [role=menu] [role=menu] [role=menuitem],
     .gcweb-menu [role=menu] [role=menu] li:first-child [role=menuitem] {
       border-bottom: 1px solid #ccc;
-      color: #000;
+      color: #000; }
+    .gcweb-menu [role=menu] [role=menu] [role=menuitem],
+    .gcweb-menu [role=menu] [role=menu] li:last-child [role=menuitem],
+    .gcweb-menu [role=menu] [role=menu] [role=menu] li:first-child [role=menuitem] {
+      color: #284162;
       text-decoration: none; }
     .gcweb-menu [role=menu] [role=menu] [role=menuitem]:hover,
     .gcweb-menu [role=menu] [role=menu] [role=menuitem]:focus,
     .gcweb-menu [role=menu] [role=menu] li:first-child [role=menuitem]:hover,
-    .gcweb-menu [role=menu] [role=menu] li:first-child [role=menuitem]:focus {
+    .gcweb-menu [role=menu] [role=menu] li:first-child [role=menuitem]:focus,
+    .gcweb-menu [role=menu] [role=menu] li:last-child [role=menuitem]:hover,
+    .gcweb-menu [role=menu] [role=menu] li:last-child [role=menuitem]:focus {
       color: #000;
       text-decoration: underline; }
     .gcweb-menu [role=menu] [role=menu] li:first-child [role=menuitem],

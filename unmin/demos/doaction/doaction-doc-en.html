@@ -24,7 +24,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -93,7 +93,7 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 			</ul>
@@ -104,10 +104,10 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+					<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 				</li>
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
+					<a href="https://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
 				</li>
 				<li>Do action - Documentation</li>
 			</ol>
@@ -264,6 +264,7 @@ container
 				<li>run</li>
 				<li>removeClass</li>
 				<li>mapfilter</li>
+				<li>tocsv</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "<em>[Name of the action]</em>" }</code></td>
@@ -283,6 +284,8 @@ container
 				<dd>Remove a class to an element</dd>
 				<dt>mapfilter</dt>
 				<dd>Apply a geomap filter</dd>
+				<dt>tocsv</dt>
+				<dd>Download an HTML table in CSV</dd>
 			</dl>
 		</td>
 	</tr>
@@ -359,6 +362,7 @@ container
 				<li>run</li>
 				<li>addClass</li>
 				<li>removeClass</li>
+				<li>tocsv</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "ajax", "target": "<em>[an ID]</em>" } }'</code></td>
@@ -383,6 +387,7 @@ container
 				<li>addClass</li>
 				<li>removeClass</li>
 				<li>mapfilter</li>
+				<li>tocsv</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "ajax", "target": "[an ID]", "trgbefore": <em>true</em> } }'</code></td>
@@ -422,10 +427,11 @@ container
 				<li>addClass</li>
 				<li>removeClass</li>
 				<li>mapfilter</li>
+				<li>tocsv</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "tblfilter", "source": "#jQuerySelector" }'</code></td>
-		<td>jQuery selector and when the action is set to <code>tblfilter</code> the source should refer to a data table enhanced with <a href="http://wet-boew.github.io/wet-boew/demos/tables/tables-en.html">tables plugin</a>.</td>
+		<td>jQuery selector and when the action is set to <code>tblfilter</code> the source should refer to a data table enhanced with <a href="https://wet-boew.github.io/wet-boew/demos/tables/tables-en.html">tables plugin</a>.</td>
 	</tr>
 	<tr>
 		<td>column</td>
@@ -623,6 +629,24 @@ container
 			</dl>
 		</td>
 	</tr>
+	<tr>
+		<td>filename</td>
+		<td><p>Define the filename to use for downloading</p>
+			<p>Available for:</p>
+			<ul>
+				<li>tocsv</li>
+			</ul>
+		</td>
+		<td><code>data-wb-doaction='{ "action": "tocsv", "source": "#myTable", "filename": "an awsome name.csv" }'</code></td>
+		<td>
+			<dl>
+				<dt>false (default):</dt>
+				<dd>It will use the table caption + ".csv", if not available it will fallback on "table.csv"</dd>
+				<dt>String:</dt>
+				<dd>The filename to use including the file extension, like <code>.csv</code></dd>
+			</dl>
+		</td>
+	</tr>
 	</tbody>
 </table>
 </section>
@@ -640,6 +664,15 @@ container
 			</tr>
 		</thead>
 		<tbody>
+			<tr>
+				<td><code>tocsv.wb-actionmng</code>
+					<ul>
+						<li>tocsv</li>
+					</ul>
+				</td>
+				<td>Triggered automatically on tocsv action execution.</td>
+				<td>Read the HTML table and initiate a file download.</td>
+			</tr>
 			<tr>
 				<td><code>patch.wb-actionmng</code>
 					<ul>
@@ -841,7 +874,7 @@ container
 		</div>
 		<dl id="wb-dtmd">
 			<dt>Date modified:&#32;</dt>
-			<dd><time property="dateModified">2017-07-16</time></dd>
+			<dd><time property="dateModified">2019-09-04</time></dd>
 		</dl>
 	</div>
 </main>
