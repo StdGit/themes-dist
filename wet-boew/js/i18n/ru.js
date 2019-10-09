@@ -54,7 +54,7 @@ wb.i18nDict = {
 	"prv-l": "Предыдущий (клавишей стрелка влево)",
 	first: "Первое",
 	last: "Последнее",
-	page: "Jump to: Page",
+	page: "Page",
 	"srch-menus": "Поиск и меню",
 	email: "E-mail",
 	"menu-close": "Закройте меню",

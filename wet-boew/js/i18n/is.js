@@ -54,7 +54,7 @@ wb.i18nDict = {
 	"prv-l": "Fyrri (vinstri ör lykill)",
 	first: "First",
 	last: "Síðasta",
-	page: "Jump to: Page",
+	page: "Page",
 	"srch-menus": "Leit og valmyndir",
 	email: "Email",
 	"menu-close": "Loka valmynd",

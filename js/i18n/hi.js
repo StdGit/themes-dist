@@ -54,7 +54,7 @@ wb.i18nDict = {
 	"prv-l": "पिछला (बाएँ तीर कुंजी)",
 	first: "पहले",
 	last: "अंतिम",
-	page: "Jump to: Page",
+	page: "Page",
 	"srch-menus": "खोज और मेनू",
 	email: "ईमेल",
 	"menu-close": "मेनू बंद",

@@ -54,7 +54,7 @@ wb.i18nDict = {
 	"prv-l": "Trang trước (phím mũi tên trái)",
 	first: "Đầu tiên",
 	last: "Cuối cùng",
-	page: "Jump to: Page",
+	page: "Page",
 	"srch-menus": "Tìm kiếm và thực đơn",
 	email: "Email",
 	"menu-close": "Đóng menu",

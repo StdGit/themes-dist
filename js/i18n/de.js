@@ -54,7 +54,7 @@ wb.i18nDict = {
 	"prv-l": "Früher (linke Pfeiltaste)",
 	first: "Erste",
 	last: "Letzte",
-	page: "Jump to: Page",
+	page: "Page",
 	"srch-menus": "Suche und Menüs",
 	email: "E-Mail",
 	"menu-close": "Schließen Sie das Menü",

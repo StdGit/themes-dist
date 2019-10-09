@@ -54,7 +54,7 @@ wb.i18nDict = {
 	"prv-l": "Ankstenis (rodyklės dešinėn klavišu)",
 	first: "Pirmasis",
 	last: "Paskutinis",
-	page: "Jump to: Page",
+	page: "Page",
 	"srch-menus": "Ieškoti ir meniu",
 	email: "El. paštas",
 	"menu-close": "Uždaryti meniu",
