@@ -18,7 +18,7 @@
 		<link href="../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../GCWeb/css/ie8-theme.min.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
 <!--[if lte IE 9]>
@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/en.html"><img src="../GCWeb/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/en.html" property="url"><img src="../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Search</h2>
@@ -83,9 +85,9 @@
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 </ul>
 </div>
 </nav>
@@ -98,7 +100,7 @@
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Temporary issue and todo list - GCWeb theme V5</h1>
 <h2>Open item (23 of 102)</h2>
 <ul class="list-responsive">
@@ -116,8 +118,6 @@
 <li><strong>Item 55 (Medium) -</strong> This require to modify the Campaing page example 1 and 2 template. To be done after at the same time of making GCWeb template conforming to content and IA spec 1.5 or if the new page type structure work is completed and well defined.</li>
 <li><strong>Item 64 (Low) -</strong> Apply new font to button and submit button. To be done later when more test case is created. Forcing the style to submit button are now out of scope.</li>
 <li><strong>Item 66 (Low) -</strong> Apply new font to form and button. To be done later when more test case is created.</li>
-<li><strong>Item 73 (Medium) -</strong> The menu behaviour would be post launched updated.</li>
-<li><strong>Item 74 (Medium) -</strong> The menu behaviour would be post launched updated.</li>
 <li><strong>Item 86 (Medium) -</strong> The same issue happen with the WET-BOEW theme when the page is resized to it's minimal width. Fixing that would require further investigation and it is not related at the new look.</li>
 <li><strong>Item 91 (Low) -</strong> Documenting the multi-page navigation would be done post launch.</li>
 <li><strong>Item 94 (Medium) -</strong> This is a new requirement. It would be applied at a later date</li>
@@ -138,6 +138,8 @@
 </ul>
 <h2>Fixed or commented issues</h2>
 <ul>
+<li>Item 73. Fixed May 14 2019 - Was priority Medium - The menu behaviours is now compatible with touch screen.</li>
+<li>Item 74. Fixed May 14 2019 - Was priority Medium - Minimal instruction are now inserted with JS.</li>
 <li>Item 102. Fixed January 25 - Fix the button size overwride in forms and for the force-style-gcweb-4-0-29</li>
 <li>Item 101. Fixed January 23 - The max-size of the filter input was set for the data table.</li>
 <li>Item 100. Fixed January 23 - Added a CSS for the multimedia player controls to keep the separator beside the times.</li>
@@ -258,7 +260,7 @@
 <li><q>Though present in early (2002) drafts of CSS3 Fonts, font-smooth has been removed from this specification and is currently not on the standard track.</q> - <a href="https://caniuse.com/#search=font-smoothing">https://caniuse.com/#search=font-smoothing</a></li>
 <li><q>This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</q> - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth">https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth</a></li>
 <li>Outdated working draft - W3C CSS font - <a href="https://www.w3.org/TR/WD-font/#font-smooth">https://www.w3.org/TR/WD-font/#font-smooth</a></li>
-<li>See also: <a href="http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/">Please Stop "Fixing" Font Smoothing – UsabilityPost</a></li>
+<li>See also: <a href="https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/">Please Stop "Fixing" Font Smoothing – UsabilityPost</a></li>
 <li>See also: <a href="https://www.zachleat.com/web/font-smooth/">Laissez-faire font smoothing and anti-aliasing</a></li>
 </ul>
 <p>The see also article make reference that playing with the anti-aliasing feature make the font more blury for use, so less readable.</p>
@@ -298,16 +300,16 @@
 <li>
 <p><strong>Item 13.</strong></p>
 <ul>
-<li>Home page : http://wet-boew.github.io/themes-dist/GCWeb/home-en.html</li>
-<li>Page d’accueil : http://wet-boew.github.io/themes-dist/GCWeb/home-fr.html</li>
+<li>Home page : https://wet-boew.github.io/themes-dist/GCWeb/home-en.html</li>
+<li>Page d’accueil : https://wet-boew.github.io/themes-dist/GCWeb/home-fr.html</li>
 </ul>
 <p>The issue is encountered in the Firefox browser. The pages will lose the focus when I am using alternatively between the mouse and the keyboard navigation at the same time. For example: I load a page in the browser then navigate by keyboard and switch to the mouse. There is no problem but when I switch back to the keyboard the focus will be lost on the menubar (neither submenu). I will have nowhere to go unless I am refreshing the page. Good news is everything works fine in the IE.</p>
 </li>
 <li>
 <p><del><strong>Fixed - Item 14.</strong></del></p>
 <ul>
-<li><del>Content limited width : http://wet-boew.github.io/themes-dist/GCWeb/content-limit-en.html</del></li>
-<li><del>Contenue de largeur limité : http://wet-boew.github.io/themes-dist/GCWeb/content-limit-fr.html</del></li>
+<li><del>Content limited width : https://wet-boew.github.io/themes-dist/GCWeb/content-limit-en.html</del></li>
+<li><del>Contenue de largeur limité : https://wet-boew.github.io/themes-dist/GCWeb/content-limit-fr.html</del></li>
 </ul>
 <p><del>This issues are about the submenu in the menuitem when i navigate the menu by keyboard interaction. I am not able to switch back and forth between the “Most requested” and each “item” in the submenu by using the Right Arrow and Left Arrow. Even though, the “Most requested” and “item” in the submenu are the same level. I can only use the Up Arrow and Down Arrow to navigate from the top to the bottom and vice vesa.</del></p>
 <p><del>(Note that if the focus is either on any “item” in the submenu or on the “Most requested” then I hit Left Arrow that brings me back to the menuitem)</del></p>
@@ -550,8 +552,8 @@ input[type=submit].btn {
 <li><del><strong>Fixed Item 70</strong> Menu - Open the menu on basic HTML mode</del></li>
 <li><del><strong>Fixed Item 71</strong> Menu - English page contains the French menu in Basic mode, vice-versa in the French page</del></li>
 <li><del><strong>Fixed Item 72</strong> Menu - Add border - At the top of the right menu, at the left at at the bottom of the first level of menu item.</del></li>
-<li><strong>Item 73</strong> Menu - Remove the menu opening via mouse-over on table and desktop and keep the menu open until the user focus out or click outside the menu area.</li>
-<li><strong>Item 74</strong> Menu - Draft menu navigation instruction about the vertical separator. also mention the most request is always expanded in tablet/desktop mode</li>
+<li><del><strong>Item 73</strong> Menu - Remove the menu opening via mouse-over on table and desktop and keep the menu open until the user focus out or click outside the menu area.</del></li>
+<li><del><strong>Item 74</strong> Menu - Draft menu navigation instruction about the vertical separator. also mention the most request is always expanded in tablet/desktop mode</del></li>
 <li><del><strong>Fixed Item 75</strong> Menu - It was recommended to remove the <code>aria-control</code> because it became too verbose for screen user</del></li>
 <li><del><strong>Fixed Item 76</strong> Font - Change the font size.</del>
 <ul>
@@ -633,7 +635,7 @@ input[type=submit].btn {
 <li><del><strong>Fixed Item 81</strong> Menu - The following need to be translated:</del>
 <ul>
 <li>Employment Insurance and leave</li>
-<li>http://international.gc.ca/world-monde/study_work_travel-etude_travail_voyage/index.aspx?lang=eng&quot;&gt;Study, work and travel worldwide</li>
+<li>https://international.gc.ca/world-monde/study_work_travel-etude_travail_voyage/index.aspx?lang=eng&quot;&gt;Study, work and travel worldwide</li>
 </ul>
 </li>
 <li><del><strong>Fixed Item 82</strong> Menu - Cleanup the markup</del></li>

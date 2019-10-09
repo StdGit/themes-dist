@@ -18,7 +18,7 @@
 		<link href="./GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="./GCWeb/css/ie8-theme.min.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="./wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
 <!--[if lte IE 9]>
@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/en.html"><img src="./GCWeb/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/en.html" property="url"><img src="./GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="./GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Search</h2>
@@ -83,9 +85,9 @@
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 </ul>
 </div>
 </nav>
@@ -98,15 +100,15 @@
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Canada.ca theme</h1>
 <div class="row">
 <div class="col-md-8 col-lg-9">
 <p>The page templates and design patterns below comprise a reference implementation of the <a href="https://design.canada.ca">Canada.ca design system</a>, including the mandatory requirement of the Content and Information Architecture (C&amp;IA) Specification. Government of Canada departments and agencies can contribute additional patterns and templates via <a href="https://github.com/wet-boew/GCWeb">GCWeb github repository</a>.</p>
 </div>
 <div class="col-xs-12 col-md-auto pull-right">
-<p><a href="https://github.com/wet-boew/GCWeb/archive/v5.0.1.zip" class="btn btn-primary">Download GCWeb theme <strong>v5.0.1</strong></a><br>
-<small>(<time>2019-02-23</time> - <a href="gcweb-theme/release/v5.0-en.html">Release notes</a>)</small></p>
+<p><a href="https://github.com/wet-boew/GCWeb/archive/v5.1.zip" class="btn btn-primary">Download GCWeb theme <strong>v5.1</strong></a><br>
+<small>(<time>2019-06-20</time> - <a href="gcweb-theme/release/v5.1-en.html">Release notes</a>)</small></p>
 </div>
 </div>
 <p>This current implementation reference match the <strong>version 2.0 of the C&amp;IA Specification released on January 2019</strong>.</p>
@@ -118,7 +120,7 @@
 <li><a href="#notes">Notes and others ressources</a></li>
 <li><a href="#evaluation">Evaluation and report</a></li>
 </ul>
-<p><small>Found an C&amp;IA implementation issue or you want to contribute at their development, let us know by submiting <a href="https://github.com/wet-boew/GCWeb/issues/new?title=C&amp;IA%20implementation%20error:%20">GCweb issue</a>, sending <a href="https://github.com/wet-boew/GCWeb/pulls">pull request</a> or by participating at one of our <a href="http://wet-boew.github.io/wet-boew-documentation/index-en.html#wet-boew-code-sprint">WET-BOEW weekly Tuesday code sprint</a>.</small></p>
+<p><small>Found an C&amp;IA implementation issue or you want to contribute at their development, let us know by submiting <a href="https://github.com/wet-boew/GCWeb/issues/new?title=C&amp;IA%20implementation%20error:%20">GCweb issue</a>, sending <a href="https://github.com/wet-boew/GCWeb/pulls">pull request</a> or by participating at one of our <a href="https://wet-boew.github.io/wet-boew-documentation/index-en.html#wet-boew-code-sprint">WET-BOEW weekly Tuesday code sprint</a>.</small></p>
 <details>
 <summary>Meaning of statuses</summary>
 <dl class="dl-horizontal mrgn-bttm-0">
@@ -180,7 +182,7 @@
 </tr>
 <tr>
 <td><a href="home-en.html">Home page</a></td>
-<td><time>2019-01-18</time></td>
+<td><time>2019-05-09</time></td>
 <td><a href="home/index.html">Templates/Home</a></td>
 <td>Shows the Government of Canada's most visited and important products and services</td>
 <td><span class="label label-success">Up to spec</span></td>
@@ -557,7 +559,7 @@
 <td></td>
 </tr>
 <tr>
-<td><a href="search/results-en.hbs">Search results page</a></td>
+<td><a href="search/results-en.html">Search results page</a></td>
 <td><time>2019-02-06</time></td>
 <td><a href="search/index.html">Templates/Search</a></td>
 <td>For search results from across the Government of Canada.</td>
@@ -566,7 +568,7 @@
 <td>v2.0</td>
 </tr>
 <tr>
-<td><a href="search/results-contextual-en.hbs">Contextual search results page</a></td>
+<td><a href="search/results-contextual-en.html">Contextual search results page</a></td>
 <td><time>2019-02-06</time></td>
 <td><a href="search/index.html">Templates/Search</a></td>
 <td>For search results that are filtered to a search context.</td>
@@ -575,7 +577,7 @@
 <td>v2.0</td>
 </tr>
 <tr>
-<td><a href="search/results-filters-en.hbs">Search facets/filters results</a></td>
+<td><a href="search/results-filters-en.html">Search facets/filters results</a></td>
 <td><time>2019-02-06</time></td>
 <td><a href="search/index.html">Templates/Search</a></td>
 <td>For search results that are accompanied by faceted filter boxes.</td>
@@ -683,7 +685,7 @@
 <td></td>
 </tr>
 <tr>
-<td>Buttons (<a class="nowrap" href="http://wet-boew.github.io/wet-boew-styleguide/v4/design/buttons-en.html">WET alternative</a>)</td>
+<td>Buttons (<a class="nowrap" href="https://wet-boew.github.io/wet-boew-styleguide/design/buttons-en.html">WET alternative</a>)</td>
 <td></td>
 <td>Common design patterns </td>
 <td>Use to encourage a person to take action</td>
@@ -762,7 +764,7 @@
 <td>v1.5</td>
 </tr>
 <tr>
-<td>Contextual alerts (<a class="nowrap" href="http://wet-boew.github.io/wet-boew-styleguide/v4/design/alerts-en.html">WET alternative</a>)</td>
+<td>Contextual alerts (<a class="nowrap" href="https://wet-boew.github.io/wet-boew-styleguide/design/alerts-en.html">WET alternative</a>)</td>
 <td></td>
 <td>Common design patterns</td>
 <td>Use to present important new information that needs to appear in a pre-existing context</td>
@@ -822,7 +824,7 @@
 <td>v1.4</td>
 </tr>
 <tr>
-<td>Icons (<a class="nowrap" href="http://wet-boew.github.io/wet-boew-styleguide/v4/design/icons-en.html">WET alternative</a>)</td>
+<td>Icons (<a class="nowrap" href="https://wet-boew.github.io/wet-boew-styleguide/design/icons-en.html">WET alternative</a>)</td>
 <td></td>
 <td>Common design patterns </td>
 <td>Use as symbols to communicate actions or states</td>
@@ -836,7 +838,7 @@
 <td></td>
 </tr>
 <tr>
-<td>Images (<a class="nowrap" href="http://wet-boew.github.io/wet-boew-styleguide/v4/design/images-en.html">WET alternative</a>)</td>
+<td>Images (<a class="nowrap" href="https://wet-boew.github.io/wet-boew-styleguide/design/images-en.html">WET alternative</a>)</td>
 <td></td>
 <td>Common design patterns </td>
 <td>Use to complement or enhance text</td>
@@ -999,6 +1001,7 @@
 <li><a href="demos/urlmapping/tblfilter-en.html">URL Mapping - Table filtering</a> (<a href="demos/urlmapping/urlmapping-doc-en.html">Documentation</a>)</li>
 <li><a href="demos/urlmapping/ajax-en.html">URL Mapping - Ajax</a> (<a href="demos/urlmapping/urlmapping-doc-en.html">Documentation</a>)</li>
 <li><a href="demos/urlmapping/patches-en.html">URL Mapping - Patching JSON</a> (<a href="demos/urlmapping/urlmapping-doc-en.html">Documentation</a>)</li>
+<li><a href="demos/urlmapping/geomap-en.html">URL Mapping - Geomap filtering</a> (<a href="demos/urlmapping/urlmapping-doc-en.html">Documentation</a>)</li>
 <li><a href="demos/fieldflow/fieldflow-en.html">Field flow</a> (<a href="demos/fieldflow/fieldflow-doc-en.html">Documentation</a>)</li>
 <li><a href="demos/fieldflow/basic-en.html">Field flow basic configuration</a> (<a href="demos/fieldflow/fieldflow-doc-en.html">Documentation</a>)</li>
 <li><a href="demos/fieldflow/advanced-en.html">Field flow advanced</a> (<a href="demos/fieldflow/fieldflow-doc-en.html">Documentation</a>)</li>
@@ -1008,11 +1011,14 @@
 <h2 id="notes">Notes and other resource</h2>
 <ul>
 <li><a href="deprecated-en.html">Deprecated markup</a></li>
-<li><a href="http://wet-boew.github.io/themes-dist/theme-gcwu-fegc/institution-en.html">GCWU theme - English institution template</a></li>
-<li><a href="http://wet-boew.github.io/themes-dist/theme-gcwu-fegc/institution-fr.html" hreflang="fr">GCWU theme - French institution template</a></li>
+<li><a href="https://wet-boew.github.io/themes-dist/theme-gcwu-fegc/institution-en.html">GCWU theme - English institution template</a></li>
+<li><a href="https://wet-boew.github.io/themes-dist/theme-gcwu-fegc/institution-fr.html" hreflang="fr">GCWU theme - French institution template</a></li>
 <li><a href="tbl-floatcolumn-en.html">Float column in a data table</a></li>
 <li><a href="redacted-en.html">Guidance on: Redacted text</a></li>
 <li><a href="gcweb-theme/index.html">GCWeb theme meta (include migration note to the GCWeb V5 new look)</a></li>
+<li><a href="colour-en.html">Colour</a></li>
+<li><a href="component/well-header-rwd-en.html">Well header responsive</a></li>
+<li><a href="experimental-en.html">Experimental features</a></li>
 </ul>
 </section>
 <section>
@@ -1091,7 +1097,7 @@
 </div>
 <dl id="wb-dtmd">
 <dt>Date modified:&#32;</dt>
-<dd><time property="dateModified">2019-02-23</time></dd>
+<dd><time property="dateModified">2019-06-21</time></dd>
 </dl>
 </div>
 </main>

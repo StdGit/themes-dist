@@ -18,7 +18,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.min.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
 <!--[if lte IE 9]>
@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/fr.html"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt=""><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/fr.html" property="url"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt="" property="logo"><span class="wb-inv" property="name"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Recherche</h2>
@@ -83,7 +85,7 @@
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/culture.html">Culture, histoire et sport</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/police.html">Services de police, justice et urgences</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/transport.html">Transport et infrastructure</a></li>
-<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
+<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/finance.html">Argent et finances</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/science.html">Science et innovation</a></li>
 </ul>
@@ -94,20 +96,20 @@
 <div class="container">
 <ol class="breadcrumb">
 <li>
-<a href="http://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
+<a href="https://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
 </li>
 <li>
-<a href="http://wet-boew.github.io/wet-boew/docs/index-fr.html">Documentation</a>
+<a href="https://wet-boew.github.io/wet-boew/docs/index-fr.html">Documentation</a>
 </li>
 <li>
-<a href="http://wet-boew.github.io/wet-boew/docs/ref/plugins-fr.html">Plugiciels</a>
+<a href="https://wet-boew.github.io/wet-boew/docs/ref/plugins-fr.html">Plugiciels</a>
 </li>
 <li>Lecteur multimédia</li>
 </ol>
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Lecteur multimédia</h1>
 <p>
 <a class="btn btn-primary" href="https://github.com/wet-boew/GCWeb/issues/new?title=Lecteur%20multim%C3%A9dia:%20">Questions ou commentaires?</a>
@@ -182,8 +184,8 @@ Ajoutez l'élément <code>figcaption</code> à l'élément <code>figure</code> a
 <li>
 Ajoutez un ou plusieurs éléments <code>source</code> à l'élément <code>video</code> avec l'attribut <code>src</code> ayant comme valeur l'URL du fichier média et l'attribut <code>type</code> étant son type MIME.<br>
 <strong>Note :</strong> Si vous indiquez plusieurs sources média pour la vidéo, le lecteur jouera le premier média qui fonctionne (est disponible, compatible, etc.).
-<pre><code>&lt;source type="video/webm" src="http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.webm" /&gt;
-&lt;source type="video/mp4" src="http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.mp4" /&gt;</code></pre>
+<pre><code>&lt;source type="video/webm" src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.webm" /&gt;
+&lt;source type="video/mp4" src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.mp4" /&gt;</code></pre>
 </li>
 <li>Ajoutez l'élément <code>track</code> avec <code>kind="captions"</code> à l'élément <code>video</code> pour inclure le sous-titrage.
 <ol>
@@ -193,7 +195,7 @@ Ajoutez les attributs <code>srclang</code> et <code>label</code> à l'élément 
 </li>
 <li>Ajoutez les attributs <code>src</code> et <code>data-type</code> à l'élément <code>track</code> pour identifier la source du sous-titrage.
 <ul>
-<li><strong>Timed Text Markup Language :</strong> <code>data-type="application/ttml+xml"</code> et <code>src</code> est l'URL du fichier de sous-titrage de format <a rel="external" href="http://www.w3.org/TR/ttaf1-dfxp/">Timed Text Markup Language</a>.</li>
+<li><strong>Timed Text Markup Language :</strong> <code>data-type="application/ttml+xml"</code> et <code>src</code> est l'URL du fichier de sous-titrage de format <a rel="external" href="https://www.w3.org/TR/ttaf1-dfxp/">Timed Text Markup Language</a>.</li>
 <li><strong>Fichier de sous-titrage HTML :</strong> <code>data-type="text/html"</code> et <code>src</code> est l'URL du fichier de sous-titrage HTML.</li>
 <li><strong>Sous-titrage HTML en ligne :</strong> <code>data-type="text/html"</code> and <code>src</code> est l'URL du sous-titrage HTML en ligne (e.g., <code>src="#inline-captions"</code>).</li>
 </ul>
@@ -214,8 +216,8 @@ Ajoutez les attributs <code>srclang</code> et <code>label</code> à l'élément 
 <h5>Code</h5>
 <pre><code>&lt;figure class="wb-mltmd" data-wb-mltmd='{"shareUrl": "https://wet-boew.github.io/v4.0-ci/demos/multimedia/multimedia-fr.html"}'&gt;
 	&lt;video poster="demo/video1-fr.jpg" title="Trouver un emploi"&gt;
-		&lt;source type="video/webm" src="http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.webm" /&gt;
-		&lt;source type="video/mp4" src="http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.mp4" /&gt;
+		&lt;source type="video/webm" src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.webm" /&gt;
+		&lt;source type="video/mp4" src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-fra.mp4" /&gt;
 		&lt;track src="cpts-lg-fr.html" kind="captions" data-type="text/html" srclang="fr" label="Français" /&gt;
 	&lt;/video&gt;
 	&lt;button class="btn btn-info cuepoint" data-cuepoint="75s"&gt;Marqueur temporel - 75s&lt;/button&gt;
@@ -230,7 +232,7 @@ Ajoutez les attributs <code>srclang</code> et <code>label</code> à l'élément 
 <ol>
 <li>Ajoutez l'attribut <code>title</code> à l'élément <code>video</code> avec la valeur étant le titre de la vidéo.</li>
 <li><p>Ajoutez un élément <code>source</code> à l'élément <code>video</code> avec l'attribut <code>type="video/youtube"</code> et l'attribut <code>src</code> étant l'URL de la vidéo.</p>
-<pre><code>&lt;source type="video/youtube" src="http://www.youtube.com/watch?v=9znKJqnFuuY" /&gt;</code></pre>
+<pre><code>&lt;source type="video/youtube" src="https://www.youtube.com/watch?v=9znKJqnFuuY" /&gt;</code></pre>
 <p>Ou</p>
 <pre><code>&lt;source type="video/youtube" src="https://youtu.be/9znKJqnFuuY" /&gt;</code></pre>
 </li>
@@ -240,7 +242,7 @@ Ajoutez les attributs <code>srclang</code> et <code>label</code> à l'élément 
 <h5>Code</h5>
 <pre><code>&lt;figure class="wb-mltmd"&gt;
 	&lt;video title="Suspect"&gt;
-		&lt;source type="video/youtube" src="http://www.youtube.com/watch?v=9znKJqnFuuY" /&gt;
+		&lt;source type="video/youtube" src="https://www.youtube.com/watch?v=9znKJqnFuuY" /&gt;
 	&lt;/video&gt;
 	&lt;figcaption&gt;
 		&lt;p&gt;Suspect&lt;/p&gt;
@@ -255,16 +257,16 @@ Ajoutez les attributs <code>srclang</code> et <code>label</code> à l'élément 
 <li>
 Ajoutez un ou plusieurs éléments <code>source</code> à l'élément <code>audio</code> avec l'attribut <code>src</code> avec la valeur étant l'URL du fichier média et l'attribut <code>type</code> étant le type MIME du fichier.<br>
 <strong>Note :</strong> Si vous indiquez plusieurs sources média pour l'audio, le lecteur jouera le premier fichier média qui fonctionne (est disponible, compatible, etc.).
-<pre><code>&lt;source src="http://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.mp3" type="audio/mp3" /&gt;
-&lt;source src="http://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.ogg" type="audio/ogg" /&gt;</code></pre>
+<pre><code>&lt;source src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.mp3" type="audio/mp3" /&gt;
+&lt;source src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.ogg" type="audio/ogg" /&gt;</code></pre>
 </li>
 </ol>
 <section>
 <h5>Code</h5>
 <pre><code>&lt;figure class="wb-mltmd"&gt;
 	&lt;audio title="Ride of the Valkyries"&gt;
-		&lt;source src="http://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.mp3" type="audio/mp3" /&gt;
-		&lt;source src="http://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.ogg" type="audio/ogg" /&gt;
+		&lt;source src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.mp3" type="audio/mp3" /&gt;
+		&lt;source src="https://www.archive.org/download/RideOfTheValkyries/ride_of_the_valkyries_2.ogg" type="audio/ogg" /&gt;
 	&lt;/audio&gt;
 	&lt;figcaption&gt;
 		&lt;p&gt;Ride of the Valkyries&lt;/p&gt;

@@ -18,7 +18,7 @@
 		<link href="../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../GCWeb/css/ie8-theme.min.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
 <!--[if lte IE 9]>
@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/en.html"><img src="../../GCWeb/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/en.html" property="url"><img src="../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Search</h2>
@@ -83,9 +85,9 @@
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 </ul>
 </div>
 </nav>
@@ -94,17 +96,17 @@
 <div class="container">
 <ol class="breadcrumb">
 <li>
-<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 </li>
 <li>
-<a href="http://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
+<a href="https://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
 </li>
 <li>Tabbed Interface - Carousel</li>
 </ol>
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Tabbed Interface - Carousel</h1>
 <span class="wb-prettify all-pre hide"></span>
 <section>
@@ -121,7 +123,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel1" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -131,7 +133,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel2" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -141,7 +143,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel3" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -199,7 +201,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel4" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -209,7 +211,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel5" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -219,7 +221,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel6" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -277,7 +279,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel30" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -287,7 +289,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel31" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -297,7 +299,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel32" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -358,7 +360,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel7" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -368,7 +370,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel8" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -378,7 +380,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel9" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -399,7 +401,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panels7" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -421,7 +423,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel10" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -431,7 +433,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel11" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -441,7 +443,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel12" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -497,7 +499,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel13" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -507,7 +509,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel14" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -517,7 +519,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel15" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -546,7 +548,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel16" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -556,7 +558,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel17" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -566,7 +568,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel18" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -599,8 +601,8 @@
 <div role="tabpanel" id="panel19" class="in fade">
 <figure class="wb-mltmd">
 <video poster="../multimedia/demo/video1-en.jpg" title="Looking for a Job">
-<source type="video/webm" src="http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.webm">
-<source type="video/mp4" src="http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.mp4">
+<source type="video/webm" src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.webm">
+<source type="video/mp4" src="https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.mp4">
 <track src="../multimedia/cpts-lg-en.html" kind="captions" data-type="text/html" srclang="en" label="English">
 </video>
 <figcaption>
@@ -611,8 +613,8 @@
 <div role="tabpanel" id="panel20" class="out fade">
 <figure class="wb-mltmd">
 <video poster="../multimedia/demo/video2-en.jpg" title="Training and Development">
-<source type="video/webm" src="http://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.webm">
-<source type="video/mp4" src="http://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.mp4">
+<source type="video/webm" src="https://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.webm">
+<source type="video/mp4" src="https://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.mp4">
 <track src="../multimedia/demo/video2-captions-en.xml" kind="captions" data-type="application/ttml+xml" srclang="en" label="English">
 </video>
 <figcaption>
@@ -639,8 +641,8 @@
 				&lt;div role=&quot;tabpanel&quot; id=&quot;panel19&quot; class=&quot;in fade&quot;&gt;
 					&lt;figure class=&quot;wb-mltmd&quot;&gt;
 						&lt;video poster=&quot;../multimedia/demo/video1-en.jpg&quot; title=&quot;Looking for a Job&quot;&gt;
-							&lt;source type=&quot;video/webm&quot; src=&quot;http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.webm&quot; /&gt;
-							&lt;source type=&quot;video/mp4&quot; src=&quot;http://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.mp4&quot; /&gt;
+							&lt;source type=&quot;video/webm&quot; src=&quot;https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.webm&quot; /&gt;
+							&lt;source type=&quot;video/mp4&quot; src=&quot;https://video2.servicecanada.gc.ca/video/boew-wet/te-lj-eng.mp4&quot; /&gt;
 							&lt;track src=&quot;../multimedia/cpts-lg-en.html&quot; kind=&quot;captions&quot; data-type=&quot;text/html&quot; srclang=&quot;en&quot; label=&quot;English&quot; /&gt;
 						&lt;/video&gt;
 						&lt;figcaption&gt;
@@ -651,8 +653,8 @@
 				&lt;div role=&quot;tabpanel&quot; id=&quot;panel20&quot; class=&quot;out fade&quot;&gt;
 					&lt;figure class=&quot;wb-mltmd&quot;&gt;
 						&lt;video poster=&quot;../multimedia/demo/video2-en.jpg&quot; title=&quot;Training and Development&quot;&gt;
-							&lt;source type=&quot;video/webm&quot; src=&quot;http://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.webm&quot; /&gt;
-							&lt;source type=&quot;video/mp4&quot; src=&quot;http://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.mp4&quot; /&gt;
+							&lt;source type=&quot;video/webm&quot; src=&quot;https://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.webm&quot; /&gt;
+							&lt;source type=&quot;video/mp4&quot; src=&quot;https://video2.servicecanada.gc.ca/video/boew-wet/dc-td-eng.mp4&quot; /&gt;
 							&lt;track src=&quot;../multimedia/demo/video2-captions-en.xml&quot; kind=&quot;captions&quot; data-type=&quot;application/ttml+xml&quot; srclang=&quot;en&quot; label=&quot;English&quot; /&gt;
 						&lt;/video&gt;
 						&lt;figcaption&gt;
@@ -679,7 +681,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel21" class="in fade">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -689,7 +691,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel22" class="out fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -699,7 +701,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel23" class="out fade">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -743,7 +745,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel24" class="slide in">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -753,7 +755,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel25" class="slide out">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -763,7 +765,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel26" class="slide out">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -807,7 +809,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="panel27" class="slidevert in">
-<a href="http://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
+<a href="https://www.tc.gc.ca/eng/civilaviation/opssvs/general-personnel-changes-1814.htm">
 <figure>
 <img src="img/protect-environment.jpg" alt="">
 <figcaption>
@@ -817,7 +819,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel28" class="slidevert out">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>
@@ -827,7 +829,7 @@
 </a>
 </div>
 <div role="tabpanel" id="panel29" class="slidevert out">
-<a href="http://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
+<a href="https://www.tc.gc.ca/eng/tankersafetyexpertpanel/menu.htm">
 <figure>
 <img src="img/investinourfuture.jpg" alt="">
 <figcaption>
@@ -869,7 +871,7 @@
 </ul>
 <div class="tabpanels">
 <div role="tabpanel" id="paneln2" class="in fade">
-<a href="http://www.tc.gc.ca/eng/railsafety/publications-46.htm">
+<a href="https://www.tc.gc.ca/eng/railsafety/publications-46.htm">
 <figure>
 <img src="img/banff.jpg" alt="">
 <figcaption>

@@ -24,7 +24,7 @@
 		<link href="../../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../../GCWeb/css/ie8-theme.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -55,8 +55,10 @@
 		</ul>
 	</section>
 		<div class="row">
-				<div class="brand col-xs-5 col-md-4">
-					<a href="https://www.canada.ca/en.html"><img src="../../../../GCWeb/assets/sig-blk-en.svg" alt="" /><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+				<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+					<a href="https://www.canada.ca/en.html" property="url"><img src="../../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo" /><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+					<meta property="areaServed" typeOf="Country" content="Canada" />
+					<link property="logo" href="../../../../GCWeb/assets/wmms-blk.svg" />
 				</div>
 	<section id="wb-srch" class="col-lg-8 text-right">
 		<h2>Search</h2>
@@ -91,9 +93,9 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -102,13 +104,13 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+					<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 				</li>
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
+					<a href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
 				</li>
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/docs/ref/plugins-en.html">Plugins</a>
+					<a href="https://wet-boew.github.io/wet-boew/docs/ref/plugins-en.html">Plugins</a>
 				</li>
 				<li>Lightbox</li>
 			</ol>
@@ -122,7 +124,7 @@ container
 
 
 
-">
+" typeof="WebPageElement">
 			<h1 property="name" id="wb-cont">Lightbox</h1>
 			
 			<p>
@@ -133,7 +135,7 @@ container
 
 <section>
 	<h2>Purpose</h2>
-	<p>Display images and other content in a dialog box, either individually or as part of a gallery. Implements the <a href="http://www.w3.org/TR/wai-aria-practices/#dialog_modal">WAI-ARIA Dialog (Modal) design pattern</a>.</p>
+	<p>Display images and other content in a dialog box, either individually or as part of a gallery. Implements the <a href="https://www.w3.org/TR/wai-aria-practices/#dialog_modal">WAI-ARIA Dialog (Modal) design pattern</a>.</p>
 </section>
 
 <section>
@@ -222,7 +224,7 @@ container
 			</tr>
 			<tr>
 				<td><code>data-wb-lbx</code></td>
-				<td>Magnific Popup settings can be set through the <code>data-wb-lbx</code> attribute or <code>window[ "wb-lbx" ]</code>. See <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html#options">Magnific Popup documentation</a> for possible options.<br /><strong>Note:</strong> WET uses the open, change and parseAjax callbacks (See <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html#events">Events</a>).</td>
+				<td>Magnific Popup settings can be set through the <code>data-wb-lbx</code> attribute or <code>window[ "wb-lbx" ]</code>. See <a href="https://dimsemenov.com/plugins/magnific-popup/documentation.html#options">Magnific Popup documentation</a> for possible options.<br /><strong>Note:</strong> WET uses the open, change and parseAjax callbacks (See <a href="https://dimsemenov.com/plugins/magnific-popup/documentation.html#events">Events</a>).</td>
 				<td>Add <code>data-wb-lbx</code> attribute to the link element with the options. </td>
 				<td>e.g., <code>data-wb-lbx='{"type": "ajax"}'</code> will set the content type. Will have the same result as adding the <code>lbx-ajax</code> class.</td>
 			</tr>
@@ -301,7 +303,7 @@ container
 			</tr>
 			<tr>
 				<td><code>mfp*</code> events (e.g., <code>mfpClose</code></td>
-				<td>Events triggered automatically by Magnific Popup (<a rel="external" href="http://dimsemenov.com/plugins/magnific-popup/documentation.html#events">documentation on Magnific Popup events</a>.</td>
+				<td>Events triggered automatically by Magnific Popup (<a rel="external" href="https://dimsemenov.com/plugins/magnific-popup/documentation.html#events">documentation on Magnific Popup events</a>.</td>
 				<td>Used by Magnific Popup to identify what events are occurring. <code>$.magnificPopup.instance</code> contains the properties of the popup in question.
 					<ul>
 						<li><strong>Opened with <code>.wb-lbx</code></strong>:

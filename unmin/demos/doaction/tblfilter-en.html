@@ -24,7 +24,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -55,8 +55,10 @@
 		</ul>
 	</section>
 		<div class="row">
-				<div class="brand col-xs-5 col-md-4">
-					<a href="https://www.canada.ca/en.html"><img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" /><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+				<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+					<a href="https://www.canada.ca/en.html" property="url"><img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo" /><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+					<meta property="areaServed" typeOf="Country" content="Canada" />
+					<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg" />
 				</div>
 	<section id="wb-srch" class="col-lg-8 text-right">
 		<h2>Search</h2>
@@ -91,9 +93,9 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -102,10 +104,10 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+					<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 				</li>
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
+					<a href="https://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
 				</li>
 				<li>Do action - Table filtering</li>
 			</ol>
@@ -119,7 +121,7 @@ container
 
 
 
-">
+" typeof="WebPageElement">
 			<h1 property="name" id="wb-cont">Do action - Table filtering</h1>
 			
 			
@@ -163,6 +165,8 @@ container
 		]'>Statements</button></li>
 	<li><button type="button" class="btn btn-link" data-wb-doaction='{ "action": "run", "trggroup": "clearFilter" }'>View all</button></li>
 </ul>
+
+<button type="button" class="btn btn-default" data-wb-doaction='{ "action": "tocsv", "source": "#dataset-filter" }'>Download the following table as CSV</button>
 
 <table class="wb-tables table table-striped table-hover" id="dataset-filter"
 		aria-live="polite"
@@ -230,6 +234,8 @@ container
 		]'&gt;Statements&lt;/button&gt;&lt;/li&gt;
 	&lt;li&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; data-wb-doaction='{ &quot;action&quot;: &quot;run&quot;, &quot;trggroup&quot;: &quot;clearFilter&quot; }'&gt;View all&lt;/button&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;button type="button" class="btn btn-default" data-wb-doaction='{ "action": "tocsv", "source": "#dataset-filter" }'&gt;Download the following table as CSV&lt;/button&gt;
 
 &lt;table class=&quot;wb-tables table table-striped table-hover&quot; id=&quot;dataset-filter&quot;
 		aria-live=&quot;polite&quot;

@@ -24,7 +24,7 @@
 		<link href="../../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../../GCWeb/css/ie8-theme.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -55,8 +55,10 @@
 		</ul>
 	</section>
 		<div class="row">
-				<div class="brand col-xs-5 col-md-4">
-					<a href="https://www.canada.ca/en.html"><img src="../../../../GCWeb/assets/sig-blk-en.svg" alt="" /><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+				<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+					<a href="https://www.canada.ca/en.html" property="url"><img src="../../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo" /><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+					<meta property="areaServed" typeOf="Country" content="Canada" />
+					<link property="logo" href="../../../../GCWeb/assets/wmms-blk.svg" />
 				</div>
 	<section id="wb-srch" class="col-lg-8 text-right">
 		<h2>Search</h2>
@@ -91,9 +93,9 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -102,13 +104,13 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+					<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 				</li>
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
+					<a href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
 				</li>
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/docs/ref/plugins-en.html">Plugins</a>
+					<a href="https://wet-boew.github.io/wet-boew/docs/ref/plugins-en.html">Plugins</a>
 				</li>
 				<li>Overlay</li>
 			</ol>
@@ -122,7 +124,7 @@ container
 
 
 
-">
+" typeof="WebPageElement">
 			<h1 property="name" id="wb-cont">Overlay</h1>
 			
 			<p>
@@ -133,7 +135,7 @@ container
 
 <section>
 	<h2>Purpose</h2>
-	<p>A flexible, responsive overlay plugin. Implements the <a href="http://www.w3.org/TR/wai-aria-practices/#dialog_modal">WAI-ARIA Dialog (Modal) design pattern</a>.</p>
+	<p>A flexible, responsive overlay plugin. Implements the <a href="https://www.w3.org/TR/wai-aria-practices/#dialog_modal">WAI-ARIA Dialog (Modal) design pattern</a>.</p>
 </section>
 
 <!--
@@ -257,6 +259,12 @@ container
 				<td>Only work for left panel, right panel, top bar and bottom bar. Add the class <code>no-print</code> to the <code>&lt;section&gt;</code> element of the overlay.</td>
 				<td><code>no-print</code></td>
 			</tr>
+			<tr>
+				<td>Add an overlay background</td>
+				<td>Stand up the overlay dialog by adding a black overlay background.</td>
+				<td>To be used with middle overlay.</td>
+				<td><code>overlay-bg</code></td>
+			</tr>
 		</tbody>
 	</table>
 </section>
@@ -293,9 +301,29 @@ container
 				<td>Used to manually open an overlay (event must be triggered on the <code>section</code> element of the overlay).</td>
 			</tr>
 			<tr>
+				<td><code>opened.wb-overlay</code></td>
+				<td>Triggered automatically after an overlay is open.</td>
+				<td>Used to identify when an overlay has been opened (target of the event)
+					<pre><code>$( document ).on( "opened.wb-overlay", ".wb-overlay", function( event ) {
+});</code></pre>
+					<pre><code>$( ".wb-overlay" ).on( "opened.wb-overlay", function( event ) {
+});</code></pre>
+				</td>
+			</tr>
+			<tr>
 				<td><code>close.wb-overlay</code></td>
 				<td>Triggered manually (e.g., <code>$( ".wb-overlay" ).trigger( "close.wb-overlay" );</code>).</td>
 				<td>Used to manually close an overlay (event must be triggered on the <code>section</code> element of the overlay).</td>
+			</tr>
+			<tr>
+				<td><code>closed.wb-overlay</code></td>
+				<td>Triggered automatically after an overlay is close.</td>
+				<td>Used to identify when an overlay has been closed (target of the event)
+					<pre><code>$( document ).on( "closed.wb-overlay", ".wb-overlay", function( event ) {
+});</code></pre>
+					<pre><code>$( ".wb-overlay" ).on( "closed.wb-overlay", function( event ) {
+});</code></pre>
+				</td>
 			</tr>
 			<tr>
 				<td><code>wb-ready.wb</code> (v4.0.5+)</td>

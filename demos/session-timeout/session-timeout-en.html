@@ -18,7 +18,7 @@
 		<link href="../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../GCWeb/css/ie8-theme.min.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
 <!--[if lte IE 9]>
@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/en.html"><img src="../../GCWeb/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/en.html" property="url"><img src="../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Search</h2>
@@ -83,9 +85,9 @@
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 </ul>
 </div>
 </nav>
@@ -94,17 +96,17 @@
 <div class="container">
 <ol class="breadcrumb">
 <li>
-<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 </li>
 <li>
-<a href="http://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
+<a href="https://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
 </li>
 <li>Session Timeout</li>
 </ol>
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Session Timeout</h1>
 <span class="wb-sessto" data-wb-sessto='{"inactivity": 30000, "logouturl": "../index-en.html"}'></span>
 <section class="wb-prettify all-pre">
@@ -128,7 +130,7 @@
 </ul>
 <p>The only required parameter is logouturl, all other fields are optional. The default plugin code is:</p>
 <pre><code>&lt;span class="wb-sessto" data-wb-sessto='{logouturl: "./"}'&gt;&lt;/span&gt;</code></pre>
-<p><strong>Note:</strong> The inactivity, reactionTime and sessionalive parameters are set in milliseconds. For help with the time values, use this <a href="http://www.calculateme.com/Time/Minutes/ToMilliseconds.htm" rel="external">time converter</a>.</p>
+<p><strong>Note:</strong> The inactivity, reactionTime and sessionalive parameters are set in milliseconds. For help with the time values, use this <a href="https://www.calculateme.com/Time/Minutes/ToMilliseconds.htm" rel="external">time converter</a>.</p>
 <p><strong>Note:</strong> Your sessionalive and inactivity parameters should be equal to your web server session alive time minus the reactionTime time. If you set your sessionalive time and inactivity time to the same as your web server without taking into consideration the reactionTime time then the session will have ended by the server as soon as the popup appears to extend the session.</p>
 <p><strong>Note:</strong> The server response needs to contain a message body. Don't use a request method (e.g. HEAD) that disallows a message body in the response.</p>
 </section>

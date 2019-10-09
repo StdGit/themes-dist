@@ -18,7 +18,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.min.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
 <!--[if lte IE 9]>
@@ -47,8 +47,10 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4">
-<a href="https://www.canada.ca/en.html"><img src="../../../GCWeb/assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+<a href="https://www.canada.ca/en.html" property="url"><img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo"><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+<meta property="areaServed" typeof="Country" content="Canada">
+<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg">
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Search</h2>
@@ -83,9 +85,9 @@
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 </ul>
 </div>
 </nav>
@@ -94,20 +96,20 @@
 <div class="container">
 <ol class="breadcrumb">
 <li>
-<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 </li>
 <li>
-<a href="http://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
+<a href="https://wet-boew.github.io/wet-boew/docs/index-en.html">Documentation</a>
 </li>
 <li>
-<a href="http://wet-boew.github.io/wet-boew/docs/ref/plugins-en.html">Plugins</a>
+<a href="https://wet-boew.github.io/wet-boew/docs/ref/plugins-en.html">Plugins</a>
 </li>
 <li>Charts and graphs</li>
 </ol>
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container">
+<main property="mainContentOfPage" class="container" typeof="WebPageElement">
 <h1 property="name" id="wb-cont">Charts and graphs</h1>
 <p>
 <a class="btn btn-primary" href="https://github.com/wet-boew/GCWeb/issues/new?title=Charts%20and%20graphs:%20">Questions or comments?</a>
@@ -117,7 +119,7 @@
 <h2>Purpose</h2>
 <p>Dynamically generates charts and graphs from table data.</p>
 <p>This feature dynamically generates charts from table data. The table data used to generate the graphic need to have a structure as defined in the techniques for tables. The graphic generated can be easily customized by using the CSS Option set to the tables elements.</p>
-<p>The Charts plugin is an interface between a data table and a drawing charts engine. Currently, for extensibility and to ease support, <a href="http://www.flotcharts.org/">Flot</a> is the charts drawing engine used.</p>
+<p>The Charts plugin is an interface between a data table and a drawing charts engine. Currently, for extensibility and to ease support, <a href="https://www.flotcharts.org/">Flot</a> is the charts drawing engine used.</p>
 </section>
 <section>
 <h2>Use when</h2>
@@ -421,7 +423,7 @@ window[ "wb-charts" ] = {
 <section>
 <h4>Going beyond</h4>
 <p>The previous unctionality allowed you to set any javascript function to better control <a href="https://github.com/flot/flot/blob/master/PLUGINS.md">flot plugin</a> and to the call back defined in the <a href="https://github.com/flot/flot/blob/master/API.md">flot API core</a>.</p>
-<p>The following examples show you how you can control the <a href="http://www.flotcharts.org/flot/examples/series-pie/index.html">pie chart</a> label formater. Note that the context has been changed to target directly the flot options.</p>
+<p>The following examples show you how you can control the <a href="https://www.flotcharts.org/flot/examples/series-pie/index.html">pie chart</a> label formater. Note that the context has been changed to target directly the flot options.</p>
 <h5>Custom pie chart label formater, code example</h5>
 <pre><code>&lt;script&gt;
 window[ "wb-charts" ] = {
@@ -597,7 +599,7 @@ window[ "wb-charts" ] = {
 </section>
 <section>
 <h2>Configuration options</h2>
-<p>For any configuration options related to Flot, please look at the <a href="https://github.com/flot/flot/blob/master/API.md">Flot Reference</a> documentation or/and the <a href="http://www.flotcharts.org/flot/examples/series-pie/index.html">pie charts options</a>.</p>
+<p>For any configuration options related to Flot, please look at the <a href="https://github.com/flot/flot/blob/master/API.md">Flot Reference</a> documentation or/and the <a href="https://www.flotcharts.org/flot/examples/series-pie/index.html">pie charts options</a>.</p>
 <p>The following configuration options are specific to wet-charts plugins.</p>
 <table class="table">
 <thead>

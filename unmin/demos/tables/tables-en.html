@@ -24,7 +24,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.css" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -55,8 +55,10 @@
 		</ul>
 	</section>
 		<div class="row">
-				<div class="brand col-xs-5 col-md-4">
-					<a href="https://www.canada.ca/en.html"><img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" /><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+				<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+					<a href="https://www.canada.ca/en.html" property="url"><img src="../../../GCWeb/assets/sig-blk-en.svg" alt="" property="logo" /><span class="wb-inv" property="name"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+					<meta property="areaServed" typeOf="Country" content="Canada" />
+					<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg" />
 				</div>
 	<section id="wb-srch" class="col-lg-8 text-right">
 		<h2>Search</h2>
@@ -91,9 +93,9 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/culture.html">Culture, history and sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/policing.html">Policing, justice and emergencies</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/transport.html">Transport and infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
+				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=eng">Canada and the world</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Money and finances</a></li>
-				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/finance.html">Science and innovation</a></li>
+				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/en/services/science.html">Science and innovation</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -102,10 +104,10 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+					<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
 				</li>
 				<li>
-					<a href="http://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
+					<a href="https://wet-boew.github.io/wet-boew/demos/index-en.html">Working examples</a>
 				</li>
 				<li>Tables</li>
 			</ol>
@@ -119,13 +121,13 @@ container
 
 
 
-">
+" typeof="WebPageElement">
 			<h1 property="name" id="wb-cont">Tables</h1>
 			
 			
 <section>
 	<h2>Example</h2>
-	<p>Integrates the <a href="http://www.datatables.net">DataTables</a> plugin into WET providing searching, sorting, filtering, pagination and other advanced features for tables.</p>
+	<p>Integrates the <a href="https://www.datatables.net">DataTables</a> plugin into WET providing searching, sorting, filtering, pagination and other advanced features for tables.</p>
 	<h3>Basic Example</h3>
 	<pre>&lt;table class="wb-tables table"&gt;</pre>
 	<table class="wb-tables table">
@@ -546,7 +548,7 @@ container
 	</table>
 	<div class="clearfix"></div>
 	<h3>Options Example</h3>
-	<p>The <a href="http://www.datatables.net/ref">DataTables API</a> is fully accessible through the <code>data-wb-tables</code> attribute using a JSON array.</p>
+	<p>The <a href="https://www.datatables.net/ref">DataTables API</a> is fully accessible through the <code>data-wb-tables</code> attribute using a JSON array.</p>
 	<pre>&lt;table class="wb-tables table table-striped table-hover" data-wb-tables='{ "ordering" : false }'&gt;</pre>
 	<table class="wb-tables table table-striped table-hover" data-wb-tables='{ "ordering": false }'>
 		<thead>
@@ -1085,7 +1087,7 @@ container
 		</tbody>
 	</table>
 	<h3>Filtering Example</h3>
-	<p>The <a href="http://www.datatables.net/ref">DataTables API</a> is fully accessible through the <code>data-wb-tables</code> attribute using a JSON Property array. and filtering can be triggered with <code>.wb-tables-filter</code> class</p>
+	<p>The <a href="https://www.datatables.net/ref">DataTables API</a> is fully accessible through the <code>data-wb-tables</code> attribute using a JSON Property array. and filtering can be triggered with <code>.wb-tables-filter</code> class</p>
 	<div class="row">
 		<div class="col-md-3">
 			<h4 class="wb-inv">Filtering Options</h4>
@@ -1214,6 +1216,21 @@ container
 								<li class="checkbox"><label for="dt_location13"><input type="checkbox" id="dt_location13" name="dt_location" data-column="5" value="Prince Edward Island"/> Prince Edward Island</label></li>
 							</ul>
 						</fieldset>
+						<details>
+							<summary><h6>Advanced Options</h6></summary>
+							<div class="radio">
+								<label for="advanced_options1_1"><input type="radio" name="advanced_options1" id="advanced_options1_1" data-aopts='{"type": "any", "column": "5"}' checked />Any</label>
+							</div>
+							<div class="radio">
+								<label for="advanced_options1_2"><input type="radio" name="advanced_options1" id="advanced_options1_2" data-aopts='{"type": "both", "column": "5"}' />Both</label>
+							</div>
+							<div class="radio">
+								<label for="advanced_options1_3"><input type="radio" name="advanced_options1" id="advanced_options1_3" data-aopts='{"type": "either", "column": "5"}' />Either</label>
+							</div>
+							<div class="radio">
+								<label for="advanced_options1_4"><input type="radio" name="advanced_options1" id="advanced_options1_4" data-aopts='{"type": "and", "column": "5"}' />And</label>
+							</div>
+						</details>
 					</div>
 					<div class="row">
 						<div class="col-xs-6">
