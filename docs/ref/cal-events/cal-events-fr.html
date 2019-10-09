@@ -18,7 +18,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.min.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.min.js"></script>
 		<![endif]-->
 <!--[if lte IE 9]>
@@ -47,10 +47,8 @@
 </ul>
 </section>
 <div class="row">
-<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-<a href="https://www.canada.ca/fr.html" property="url"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt="" property="logo"><span class="wb-inv" property="name"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
-<meta property="areaServed" typeof="Country" content="Canada">
-<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg">
+<div class="brand col-xs-5 col-md-4">
+<a href="https://www.canada.ca/fr.html"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt=""><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
 </div>
 <section id="wb-srch" class="col-lg-8 text-right">
 <h2>Recherche</h2>
@@ -85,7 +83,7 @@
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/culture.html">Culture, histoire et sport</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/police.html">Services de police, justice et urgences</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/transport.html">Transport et infrastructure</a></li>
-<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
+<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/finance.html">Argent et finances</a></li>
 <li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/science.html">Science et innovation</a></li>
 </ul>
@@ -96,20 +94,20 @@
 <div class="container">
 <ol class="breadcrumb">
 <li>
-<a href="https://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
+<a href="http://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
 </li>
 <li>
-<a href="https://wet-boew.github.io/wet-boew/docs/index-fr.html">Documentation</a>
+<a href="http://wet-boew.github.io/wet-boew/docs/index-fr.html">Documentation</a>
 </li>
 <li>
-<a href="https://wet-boew.github.io/wet-boew/docs/ref/plugins-fr.html">Plugiciels</a>
+<a href="http://wet-boew.github.io/wet-boew/docs/ref/plugins-fr.html">Plugiciels</a>
 </li>
 <li>Calendrier d&#x27;événements</li>
 </ol>
 </div>
 </nav>
 </header>
-<main property="mainContentOfPage" class="container" typeof="WebPageElement">
+<main property="mainContentOfPage" class="container">
 <h1 property="name" id="wb-cont">Calendrier d'événements</h1>
 <p>
 <a class="btn btn-primary" href="https://github.com/wet-boew/GCWeb/issues/new?title=Calendrier%20d&#x27;%C3%A9v%C3%A9nements:%20">Questions ou commentaires?</a>
@@ -117,7 +115,7 @@
 <span class="wb-prettify all-pre hide"></span>
 <section>
 <h2>Objet</h2>
-<p>Le but de cette fonctionnalité est de fournir une interface pour parcourir une liste chronologique d'événements. Met en œuvre le <a href="https://www.w3.org/TR/wai-aria-practices/#datepicker">modèle de conception &#171;&#160;<span lang="en">Date Picker</span>&#160;&#187; de WAI-ARIA (anglais seulement)</a>.</p>
+<p>Le but de cette fonctionnalité est de fournir une interface pour parcourir une liste chronologique d'événements. Met en œuvre le <a href="http://www.w3.org/TR/wai-aria-practices/#datepicker">modèle de conception &#171;&#160;<span lang="en">Date Picker</span>&#160;&#187; de WAI-ARIA (anglais seulement)</a>.</p>
 </section>
 <section>
 <h2>Utiliser lorsque</h2>
@@ -150,14 +148,14 @@
 	&lt;ol&gt;
 		&lt;li&gt;
 			&lt;section&gt;
-				&lt;h4&gt;&lt;a href="https://www.canada.gc.ca"&gt;Événement de seul-jour&lt;/a&gt;&lt;/h4&gt;
+				&lt;h4&gt;&lt;a href="http://www.canada.gc.ca"&gt;Événement de seul-jour&lt;/a&gt;&lt;/h4&gt;
 				&lt;p&gt;&lt;time datetime="2011-03-11"&gt;11 mars 2011&lt;/time&gt;&lt;/p&gt;
 				&lt;p&gt;Description de l'événement&lt;/p&gt;
 			&lt;/section&gt;
 		&lt;/li&gt;
 		&lt;li&gt;
 			&lt;section&gt;
-				&lt;h4&gt;&lt;a href="https://www.canada.gc.ca"&gt;Événement sur plusieurs jours&lt;/a&gt;&lt;/h4&gt;
+				&lt;h4&gt;&lt;a href="http://www.canada.gc.ca"&gt;Événement sur plusieurs jours&lt;/a&gt;&lt;/h4&gt;
 				&lt;p&gt;&lt;time datetime="2011-03-22"&gt;22 mars 2011&lt;/time&gt; à &lt;time datetime="2011-04-26"&gt;26 avril 2011&lt;/time&gt;&lt;/p&gt;
 				&lt;p&gt;Description de l'événement&lt;/p&gt;
 			&lt;/section&gt;
@@ -178,8 +176,8 @@
 				&lt;p&gt;Description de l'événement&lt;/p&gt;
 				&lt;p&gt;Liens:&lt;/p&gt;
 				&lt;ul&gt;
-					&lt;li&gt;&lt;a href="https://www.canada.gc.ca"&gt;Événement de seul-jour - Lien 1&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href="https://www.canada.gc.ca"&gt;Événement de seul-jour - Lien 2&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="http://www.canada.gc.ca"&gt;Événement de seul-jour - Lien 1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="http://www.canada.gc.ca"&gt;Événement de seul-jour - Lien 2&lt;/a&gt;&lt;/li&gt;
 				&lt;/ul&gt;
 			&lt;/section&gt;
 		&lt;/li&gt;
@@ -190,8 +188,8 @@
 				&lt;p&gt;Description de l'événement&lt;/p&gt;
 				&lt;p&gt;Liens:&lt;/p&gt;
 				&lt;ul&gt;
-					&lt;li&gt;&lt;a href="https://www.canada.gc.ca"&gt;Événement sur plusieurs jours - Lien 1&lt;/a&gt;&lt;/li&gt;
-					&lt;li&gt;&lt;a href="https://www.canada.gc.ca"&gt;Événement sur plusieurs jours - Lien 2&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="http://www.canada.gc.ca"&gt;Événement sur plusieurs jours - Lien 1&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="http://www.canada.gc.ca"&gt;Événement sur plusieurs jours - Lien 2&lt;/a&gt;&lt;/li&gt;
 				&lt;/ul&gt;
 			&lt;/section&gt;
 		&lt;/li&gt;
@@ -210,13 +208,13 @@
 		&lt;ol&gt;
 			&lt;li class="cal-disp-onshow"&gt;
 				&lt;section&gt;
-					&lt;h5&gt;&lt;a href="https://www.ec.gc.ca"&gt;Événement 1&lt;/a&gt;&lt;/h5&gt;
+					&lt;h5&gt;&lt;a href="http://www.ec.gc.ca"&gt;Événement 1&lt;/a&gt;&lt;/h5&gt;
 					&lt;p&gt;&lt;time datetime="2011-03-11"&gt;11 mars 2011&lt;/time&gt;&lt;/p&gt;
 				&lt;/section&gt;
 			&lt;/li&gt;
 			&lt;li class="cal-disp-onshow"&gt;
 				&lt;section&gt;
-					&lt;h5&gt;&lt;a href="https://canada.gc.ca"&gt;Événement 2&lt;/a&gt;&lt;/h5&gt;
+					&lt;h5&gt;&lt;a href="http://canada.gc.ca"&gt;Événement 2&lt;/a&gt;&lt;/h5&gt;
 					&lt;p&gt;&lt;time datetime="2011-03-11"&gt;11 mars 2011&lt;/time&gt;&lt;/p&gt;
 				&lt;/section&gt;
 			&lt;/li&gt;
@@ -225,7 +223,7 @@
 					&lt;h5&gt;Expo 2010 Shanghai&lt;/h5&gt;
 					&lt;p&gt;&lt;time datetime="2011-03-22"&gt;22 mars 2011&lt;/time&gt; au &lt;time datetime="2011-04-26"&gt;26 avril 2011&lt;/time&gt;&lt;/p&gt;
 					&lt;p&gt;Le Pavillon du Canada souligne le dynamisme et la vitalité des villes canadiennes et de leurs résidents.&lt;/p&gt;
-					&lt;p&gt;Pour obtenir de plus amples renseignements, visitez le site Web de Canada à Expo 2010 Shanghai à l’adresse suivante : &lt;a href="https://www.expo2010canada.gc.ca/index-fra.cfm"&gt;www.expo2010canada.gc.ca/index-fra.cfm&lt;/a&gt;&lt;/p&gt;
+					&lt;p&gt;Pour obtenir de plus amples renseignements, visitez le site Web de Canada à Expo 2010 Shanghai à l’adresse suivante : &lt;a href="http://www.expo2010canada.gc.ca/index-fra.cfm"&gt;www.expo2010canada.gc.ca/index-fra.cfm&lt;/a&gt;&lt;/p&gt;
 				&lt;/section&gt;
 			&lt;/li&gt;
 			&lt;li class="cal-disp-onshow"&gt;
@@ -236,19 +234,19 @@
 			&lt;/li&gt;
 			&lt;li class="cal-disp-onshow"&gt;
 				&lt;section&gt;
-					&lt;h5&gt;&lt;a href="https://www.ec.gc.ca"&gt;Événement 6&lt;/a&gt;&lt;/h5&gt;
+					&lt;h5&gt;&lt;a href="http://www.ec.gc.ca"&gt;Événement 6&lt;/a&gt;&lt;/h5&gt;
 					&lt;p&gt;&lt;time datetime="2011-04-11"&gt;11 avril 2011&lt;/time&gt;&lt;/p&gt;
 				&lt;/section&gt;
 			&lt;/li&gt;
 			&lt;li class="cal-disp-onshow"&gt;
 				&lt;section&gt;
-					&lt;h5&gt;&lt;a href="https://canada.gc.ca"&gt;Événement 7&lt;/a&gt;&lt;/h5&gt;
+					&lt;h5&gt;&lt;a href="http://canada.gc.ca"&gt;Événement 7&lt;/a&gt;&lt;/h5&gt;
 					&lt;p&gt;&lt;time datetime="2011-04-23"&gt;23 avril 2011&lt;/time&gt;&lt;/p&gt;
 				&lt;/section&gt;
 			&lt;/li&gt;
 			&lt;li class="cal-disp-onshow"&gt;
 				&lt;section&gt;
-					&lt;h5&gt;&lt;a href="https://canada.gc.ca"&gt;Événement 17&lt;/a&gt;&lt;/h5&gt;
+					&lt;h5&gt;&lt;a href="http://canada.gc.ca"&gt;Événement 17&lt;/a&gt;&lt;/h5&gt;
 					&lt;p&gt;&lt;time datetime="2011-04-23"&gt;23 avril 2011&lt;/time&gt;&lt;/p&gt;
 				&lt;/section&gt;
 			&lt;/li&gt;

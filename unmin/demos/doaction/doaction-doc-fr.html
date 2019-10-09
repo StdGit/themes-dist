@@ -24,7 +24,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -55,10 +55,8 @@
 		</ul>
 	</section>
 		<div class="row">
-				<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-					<a href="https://www.canada.ca/fr.html" property="url"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt="" property="logo" /><span class="wb-inv" property="name"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
-					<meta property="areaServed" typeOf="Country" content="Canada" />
-					<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg" />
+				<div class="brand col-xs-5 col-md-4">
+					<a href="https://www.canada.ca/fr.html"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt="" /><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
 				</div>
 	<section id="wb-srch" class="col-lg-8 text-right">
 		<h2>Recherche</h2>
@@ -93,7 +91,7 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/culture.html">Culture, histoire et sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/police.html">Services de police, justice et urgences</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/transport.html">Transport et infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
+				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/finance.html">Argent et finances</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/science.html">Science et innovation</a></li>
 			</ul>
@@ -104,10 +102,10 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li>
-					<a href="https://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
+					<a href="http://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
 				</li>
 				<li>
-					<a href="https://wet-boew.github.io/wet-boew/demos/index-fr.html">Exemples pratiques</a>
+					<a href="http://wet-boew.github.io/wet-boew/demos/index-fr.html">Exemples pratiques</a>
 				</li>
 				<li>Exécuter des actions - Documentation</li>
 			</ol>
@@ -121,7 +119,7 @@ container
 
 
 
-" typeof="WebPageElement">
+">
 			<h1 property="name" id="wb-cont">Exécuter des actions - Documentation</h1>
 			
 			
@@ -267,7 +265,6 @@ container
 				<li>addClass</li>
 				<li>run</li>
 				<li>removeClass</li>
-				<li>mapfilter</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "<em>[Name of the action]</em>" }</code></td>
@@ -285,8 +282,6 @@ container
 				<dd>Add a class to an element</dd>
 				<dt>removeClass</dt>
 				<dd>Remove a class to an element</dd>
-				<dt>mapfilter</dt>
-				<dd>Apply a geomap filter</dd>
 			</dl>
 		</td>
 	</tr>
@@ -386,7 +381,6 @@ container
 				<li>run</li>
 				<li>addClass</li>
 				<li>removeClass</li>
-				<li>mapfilter</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "ajax", "target": "[an ID]", "trgbefore": <em>true</em> } }'</code></td>
@@ -410,7 +404,6 @@ container
 				<li>run</li>
 				<li>addClass</li>
 				<li>removeClass</li>
-				<li>mapfilter</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "ajax", "target": "[an ID]", "trggroup": "<em>[a name]</em>" } }'</code></td>
@@ -425,11 +418,10 @@ container
 				<li>patch</li>
 				<li>addClass</li>
 				<li>removeClass</li>
-				<li>mapfilter</li>
 			</ul>
 		</td>
 		<td><code>data-wb-doaction='{ "action": "tblfilter", "source": "#jQuerySelector" }'</code></td>
-		<td>jQuery selector and when the action is set to <code>tblfilter</code> the source should refer to a data table enhanced with <a href="https://wet-boew.github.io/wet-boew/demos/tables/tables-en.html">tables plugin</a>.</td>
+		<td>jQuery selector and when the action is set to <code>tblfilter</code> the source should refer to a data table enhanced with <a href="http://wet-boew.github.io/wet-boew/demos/tables/tables-en.html">tables plugin</a>.</td>
 	</tr>
 	<tr>
 		<td>column</td>
@@ -586,44 +578,6 @@ container
 				<dd>The patches will be ignored at the next patches update by the JSON manager.</dd>
 				<dt>true:</dt>
 				<dd>The patches will be cumulative for the next patches updated by the JSON manager, like from instruction received by fieldflow.</dd>
-			</dl>
-		</td>
-	</tr>
-	<tr>
-		<td>filter</td>
-		<td><p>Filter type</p>
-			<p>Available for:</p>
-			<ul>
-				<li>mapfilter</li>
-			</ul>
-		</td>
-		<td><code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "aoi", "value"="64 -10 34 -177" } }'</code><br />
-		<code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "layout", "value"="Layout name" } }'</code></td>
-		<td>
-			<dl>
-				<dt><code>aoi</code>:</dt>
-				<dd>Area Of Interest (zoom filtering) and the configuration "value" contains a 4 cardinal point or Well-Known Text (WKT) string.</dd>
-				<dt><code>layout</code>:</dt>
-				<dd>Layout (overlay filtering) and the configuration "value" contains the name of that layer as displayed in the legend if any or an empty string to select all.</dd>
-			</dl>
-		</td>
-	</tr>
-	<tr>
-		<td>value</td>
-		<td><p>The value for the action</p>
-			<p>Available for:</p>
-			<ul>
-				<li>mapfilter</li>
-			</ul>
-		</td>
-		<td><code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "aoi", "value"="64 -10 34 -177" } }'</code><br />
-		<code>data-wb-urlmapping='{ "QueryStringToBeMapped": { "action": "mapfilter", "source": "#id", "filter": "layout", "value"="Layout name" } }'</code></td>
-		<td>
-			<dl>
-				<dt><code>&lt;string&gt;</code> (aoi):</dt>
-				<dd>4 cardinal point or Well-Known Text (WKT) string for filter set to the Area Of Interest (zoom filtering).</dd>
-				<dt><code>&lt;string&gt;</code> (layer):</dt>
-				<dd>The name of that layer as displayed in the legend or an empty string to select all for filter set to Layout (overlay filtering).</dd>
 			</dl>
 		</td>
 	</tr>

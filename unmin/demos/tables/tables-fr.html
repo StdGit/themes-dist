@@ -24,7 +24,7 @@
 		<link href="../../../GCWeb/assets/favicon.ico" rel="shortcut icon" />
 		
 		<link rel="stylesheet" href="../../../GCWeb/css/ie8-theme.css" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
 		<script src="../../../wet-boew/js/ie8-wet-boew.js"></script>
 		<![endif]-->
 		<!--[if lte IE 9]>
@@ -55,10 +55,8 @@
 		</ul>
 	</section>
 		<div class="row">
-				<div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
-					<a href="https://www.canada.ca/fr.html" property="url"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt="" property="logo" /><span class="wb-inv" property="name"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
-					<meta property="areaServed" typeOf="Country" content="Canada" />
-					<link property="logo" href="../../../GCWeb/assets/wmms-blk.svg" />
+				<div class="brand col-xs-5 col-md-4">
+					<a href="https://www.canada.ca/fr.html"><img src="../../../GCWeb/assets/sig-blk-fr.svg" alt="" /><span class="wb-inv"> Gouvernement du Canada / <span lang="en">Government of Canada</span></span></a>
 				</div>
 	<section id="wb-srch" class="col-lg-8 text-right">
 		<h2>Recherche</h2>
@@ -93,7 +91,7 @@
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/culture.html">Culture, histoire et sport</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/police.html">Services de police, justice et urgences</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/transport.html">Transport et infrastructure</a></li>
-				<li role="presentation"><a role="menuitem" href="https://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
+				<li role="presentation"><a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=fra">Canada et le monde</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/finance.html">Argent et finances</a></li>
 				<li role="presentation"><a role="menuitem" href="https://www.canada.ca/fr/services/science.html">Science et innovation</a></li>
 			</ul>
@@ -104,10 +102,10 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li>
-					<a href="https://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
+					<a href="http://wet-boew.github.io/wet-boew/index-fr.html">Accueil</a>
 				</li>
 				<li>
-					<a href="https://wet-boew.github.io/wet-boew/demos/index-fr.html">Exemples pratiques</a>
+					<a href="http://wet-boew.github.io/wet-boew/demos/index-fr.html">Exemples pratiques</a>
 				</li>
 				<li>Tables</li>
 			</ol>
@@ -121,7 +119,7 @@ container
 
 
 
-" typeof="WebPageElement">
+">
 			<h1 property="name" id="wb-cont">Tables</h1>
 			
 			
@@ -551,7 +549,7 @@ container
 	<div class="clearfix"></div>
 
 	<h3>Exemple d'options</h3>
-	<p>Le <a href="https://www.datatables.net/ref">DataTables API</a> (en anglais seulement) est entièrement accessible par le <code>data-wb-tables</code> attribut à l'aide d'un tableau JSON.</p>
+	<p>Le <a href="http://www.datatables.net/ref">DataTables API</a> (en anglais seulement) est entièrement accessible par le <code>data-wb-tables</code> attribut à l'aide d'un tableau JSON.</p>
 	<pre>&lt;table class="wb-tables table table-striped table-hover" data-wb-tables='{ "ordering": false }'&gt;</pre>
 	<table class="wb-tables table table-striped table-hover" data-wb-tables='{ "ordering": false }'>
 		<thead>
@@ -1094,7 +1092,7 @@ container
 		</tbody>
 	</table>
 	<h3>Exemple de filtrage</h3>
-	<p>Le <a href="https://www.datatables.net/ref">DataTables API</a> (en anglais seulement) est entièrement accessible par le <code>data-wb-tables</code> attribut à l'aide d'un tableau JSON et pour filtrer vous pouvez utilizer le class <code>.wb-tables-filter</code> </p>
+	<p>Le <a href="http://www.datatables.net/ref">DataTables API</a> (en anglais seulement) est entièrement accessible par le <code>data-wb-tables</code> attribut à l'aide d'un tableau JSON et pour filtrer vous pouvez utilizer le class <code>.wb-tables-filter</code> </p>
 	<div class="row">
 		<div class="col-md-3">
 			<h4 class="wb-inv">Options</h4>
@@ -1223,21 +1221,6 @@ container
 								<li class="checkbox"><label for="dt_location13"><input type="checkbox" id="dt_location13" name="dt_location" data-column="5" value="Prince Edward Island"/> Prince Edward Island</label></li>
 							</ul>
 						</fieldset>
-						<details>
-							<summary><h6>Advanced Options</h6></summary>
-							<div class="radio">
-								<label for="advanced_options1_1"><input type="radio" name="advanced_options1" id="advanced_options1_1" data-aopts='{"type": "any", "column": "5"}' checked />Any</label>
-							</div>
-							<div class="radio">
-								<label for="advanced_options1_2"><input type="radio" name="advanced_options1" id="advanced_options1_2" data-aopts='{"type": "both", "column": "5"}' />Both</label>
-							</div>
-							<div class="radio">
-								<label for="advanced_options1_3"><input type="radio" name="advanced_options1" id="advanced_options1_3" data-aopts='{"type": "either", "column": "5"}' />Either</label>
-							</div>
-							<div class="radio">
-								<label for="advanced_options1_4"><input type="radio" name="advanced_options1" id="advanced_options1_4" data-aopts='{"type": "and", "column": "5"}' />And</label>
-							</div>
-						</details>
 					</div>
 					<div class="row">
 						<div class="col-xs-6">

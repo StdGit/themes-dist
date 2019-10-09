@@ -4,7 +4,7 @@
  * @license wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
  * @author @duboisp
  */
-( function( $, wb, document ) {
+( function( $, wb ) {
 "use strict";
 
 /*
@@ -24,8 +24,6 @@ var $document = wb.doc,
 	postponeActions = { },
 	groupPostAction = { },
 	actionMngEvent = [
-		"mapfilter",
-		"tocsv",
 		"patch",
 		"ajax",
 		"addClass",
@@ -179,90 +177,6 @@ var $document = wb.doc,
 		column = ( colInt === true ) ? colInt : column;
 		$datatable.column( column ).search( data.value, regex, smart, caseinsen ).draw();
 	},
-	geomapAOIAct = function( event, data ) {
-		var $source = $( data.source || event.target ),
-			map = $source.get( 0 ).geomap,
-			tpFilter = data.filter,
-			value = data.value;
-
-		// if aoi => There will be 4 coordinate space separated (Sequence: N E S W)
-		if ( tpFilter === "aoi" ) {
-			map.zoomAOI( value );
-		}
-
-		// if layer => The layer name
-		if ( tpFilter === "layer" ) {
-			map.showLayer( value, true );
-		}
-	},
-
-	// @source => jQuery selector to an HTML table
-	// @fname => Filename to save the csv
-	tblToCSV = function( source, fname ) {
-
-		var $table = $( source ),
-			table = $table.get( 0 ),
-			isDataTable = table.classList.contains( "wb-tables" ),
-			csvText = "",
-			fileName = fname || ( table.caption || "table" ) + ".csv",
-			rows = table.rows,
-			i, rows_len = rows.length,
-			j, columns_len = rows[ 0 ].cells.length,
-			$datatable;
-
-		// Is a table enhanced with the datatable plugin?
-		if ( isDataTable ) {
-			$datatable = $table.dataTable( { "retrieve": true } ).api();
-			rows_len = $datatable.rows()[ 0 ].length;
-
-			// Need to add the first row, because the header are not included in the list of rows returned by the datatable plugin.
-			for ( j = 0; j < columns_len; j = j + 1 ) {
-				cellCSVText = rows[ 0 ].cells[ j ].textContent;
-				cellCSVText = cellCSVText.replace( /\"/g, "\"\"" );
-				if ( j ) {
-					csvText = csvText + ",\"" + cellCSVText + "\"";
-				} else {
-					csvText = csvText + "\"" + cellCSVText + "\"";
-				}
-			}
-			csvText = csvText + "\n";
-		}
-
-		for ( i = 0; i < rows_len; i = i + 1 ) {
-
-			for ( j = 0; j < columns_len; j = j + 1 ) {
-				var cellCSVText;
-				if ( isDataTable ) {
-
-					// I would like to use ".node()" instead of ".data()" but it is not possible to get the referencied
-					// node because it don't exist if the table have multiple pages.
-					cellCSVText = $datatable.cell( i, j, { "page": "all" } ).data();
-
-					// If the content of the cell is HTML, the content will be parsed through a document fragment to extract
-					// it's textContent equivalent value
-					if ( cellCSVText.indexOf( "<" ) !== -1 ) {
-						var div = document.createElement( "div" );
-						div.innerHTML = cellCSVText;
-						cellCSVText = div.textContent;
-					}
-				} else {
-					cellCSVText = rows[ i ].cells[ j ].textContent;
-				}
-				cellCSVText = cellCSVText.replace( /\"/g, "\"\"" );
-				cellCSVText = cellCSVText + "\"";
-				if ( j ) {
-					csvText = csvText + ",\"" + cellCSVText;
-				} else {
-					csvText = csvText + "\"" + cellCSVText;
-				}
-			}
-
-			csvText = csvText + "\n";
-		}
-
-		wb.download( new Blob( [ csvText ], { type: "text/plain;charset=utf-8" } ), fileName );
-
-	},
 	runAct = function( event, data ) {
 
 		var elm = event.target,
@@ -393,12 +307,6 @@ $document.on( actionMngEvent, selector, function( event, data ) {
 		case "patch":
 			patchAct( event, data );
 			break;
-		case "mapfilter":
-			geomapAOIAct( event, data );
-			break;
-		case "tocsv":
-			tblToCSV( data.source, data.filename );
-			break;
 		}
 	}
 } );
@@ -408,50 +316,6 @@ $document.on( "timerpoke.wb " + initEvent, selectorPreset, init );
 
 // Add the timer poke to initialize the plugin
 wb.add( selectorPreset );
-
-} )( jQuery, wb, document );
-
-/**
- * @title WET-BOEW Set background image
- * @overview to be replaced by CSS 4: background-image:attr(data-bgimg, url)
- * @license wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
- * @author @duboisp
- */
-( function( $, wb ) {
-"use strict";
-
-/*
- * Variable and function definitions.
- * These are global to the plugin - meaning that they will be initialized once per page,
- * not once per instance of plugin on the page. So, this is a good place to define
- * variables that are common to all instances of the plugin on a page.
- */
-var $document = wb.doc,
-	componentName = "wb-bgimg",
-	selector = "[data-bgimg]",
-
-	init = function( event ) {
-
-		// Start initialization
-		// returns DOM object = proceed with init
-		// returns undefined = do not proceed with init (e.g., already initialized)
-		var elm = wb.init( event, componentName, selector );
-
-		if ( elm ) {
-
-			//to be replaced by CSS 4: background-image:attr(data-bgimg, url)
-			elm.style.backgroundImage = "url(" + elm.dataset.bgimg + ")";
-
-			// Identify that initialization has completed
-			wb.ready( $( elm ), componentName );
-		}
-	};
-
-// Bind the init event of the plugin
-$document.on( "timerpoke.wb wb-init." + componentName, selector, init );
-
-// Add the timer poke to initialize the plugin
-wb.add( selector );
 
 } )( jQuery, wb );
 
@@ -3295,7 +3159,7 @@ wb.add( selector );
 "use strict";
 
 var componentName = "gcweb-menu",
-	selector = "." + componentName,
+	selector = ".gcweb-menu",
 	initEvent = "wb-init" + selector,
 	$document = wb.doc,
 	selectorAjaxed =  selector + " [data-ajax-replace]," + selector + " [data-ajax-append]," + selector + " [data-ajax-prepend]," + selector + " [data-wb-ajax]",
@@ -3305,11 +3169,6 @@ var componentName = "gcweb-menu",
 	justOpened,
 	isMobileMode, // Mobile vs Desktop
 	isMediumView,
-	preventFocusIn,
-	i18nInstruction = {
-		en: "Press the SPACEBAR to expand or the escape key to collapse this menu. Use the Up and Down arrow keys to choose a submenu item. Press the Enter or Right arrow key to expand it, or the Left arrow or Escape key to collapse it. Use the Up and Down arrow keys to choose an item on that level and the Enter key to access it.",
-		fr: "Appuyez sur la barre d'espacement pour ouvrir ou sur la touche d'échappement pour fermer le menu. Utilisez les flèches haut et bas pour choisir un élément de sous-menu. Appuyez sur la touche Entrée ou sur la flèche vers la droite pour le développer, ou sur la flèche vers la gauche ou la touche Échap pour le réduire. Utilisez les flèches haut et bas pour choisir un élément de ce niveau et la touche Entrée pour y accéder."
-	},
 
 	/**
 	 * @method init
@@ -3324,17 +3183,11 @@ var componentName = "gcweb-menu",
 			ajaxFetch;
 		if ( elm ) {
 
-			if ( i18nInstruction[ wb.lang ] ) {
-				i18nInstruction = i18nInstruction[ wb.lang ];
-			} else if ( i18nInstruction.en  ) {
-				i18nInstruction = i18nInstruction.en;
-			}
-
 			// If the menu item are ajaxed in, initialize after the ajax is completed
 			ajaxFetch = elm.querySelector( selectorAjaxed );
 
 			if ( !ajaxFetch ) {
-				onAjaxLoaded( elm.querySelector( "[role=menu]" ) );
+				onAjaxLoaded( elm.firstChild );
 			}
 
 
@@ -3349,9 +3202,6 @@ var componentName = "gcweb-menu",
 		if ( isMobileMode || isMediumView ) {
 			setMnu3LevelOrientationExpandState( false, isMediumView );
 		}
-
-		// Add menu navigation instruction
-		subElm.previousElementSibling.setAttribute( "aria-label", i18nInstruction );
 
 		// Identify that initialization has completed
 		wb.ready( $elm, componentName );
@@ -3385,34 +3235,29 @@ function OpenMenu( elm ) {
 }
 function CloseMenu( elm, force ) {
 
-	//Ensure elm isn't null
-	if ( elm ) {
-
-		// Ensure elm is targeted on the haspopup element
-		if ( !elm.hasAttribute( "aria-haspopup" ) ) {
-			elm = elm.previousElementSibling;
-		}
-
-		if ( !force ) {
-
-			// Can the menu be closed?
-			// Get the menu item that has the focus.
-			var currentFocusIsOn = elm.nextElementSibling.querySelector( "[role=menuitem]:focus" );
-			var siblingHasFocus = elm.parentElement.parentElement.querySelector( "[role=menuitem]:focus" );
-
-			// Check if we keep the menu opon
-			if ( currentFocusIsOn || siblingHasFocus === elm ) {
-				return;
-			}
-		}
-
-		elm.setAttribute( "aria-expanded", "false" );
+	// Ensure elm is targeted on the haspopup element
+	if ( !elm.hasAttribute( "aria-haspopup" ) ) {
+		elm = elm.previousElementSibling;
 	}
+
+	if ( !force ) {
+
+		// Can the menu be closed?
+		// Get the menu item that has the focus.
+		var currentFocusIsOn = elm.nextElementSibling.querySelector( "[role=menuitem]:focus" );
+		var siblingHasFocus = elm.parentElement.parentElement.querySelector( "[role=menuitem]:focus" );
+
+		// Check if we keep the menu opon
+		if ( currentFocusIsOn || siblingHasFocus === elm ) {
+			return;
+		}
+	}
+
+	elm.setAttribute( "aria-expanded", "false" );
 }
 
 // On hover, wait for the delay before to open the menu
 function OpenMenuWithDelay( elm ) {
-
 
 	if ( elm.dataset.keepExpanded === "md-min" ) {
 		return;
@@ -3423,6 +3268,18 @@ function OpenMenuWithDelay( elm ) {
 
 	globalTimeoutOn = setTimeout( function() {
 		OpenMenu( elm );
+	}, hoverDelay );
+}
+function CloseMenuWithDelay( elm ) {
+
+	if ( elm.dataset.keepExpanded === "md-min" ) {
+		return;
+	}
+
+	clearTimeout( globalTimeoutOff );
+
+	globalTimeoutOff = setTimeout( function() {
+		CloseMenu( elm );
 	}, hoverDelay );
 }
 
@@ -3441,7 +3298,6 @@ $document.on( "focusin", selector + " ul [aria-haspopup]", function( event ) {
 
 	// Don't open the submenu
 	if ( isMobileMode ) {
-		preventFocusIn = false;
 		return;
 	}
 
@@ -3470,23 +3326,66 @@ $document.on( "mouseenter focusin", selector + " [aria-haspopup] + [role=menu]",
 	clearTimeout( globalTimeoutOff );
 } );
 
-// Ensure the menu don't switch when the user do a quick mouse over on other menu item.
-$document.on( "mouseleave", selector + " [aria-haspopup]", function( ) {
-	clearTimeout( globalTimeoutOn );
+
+$document.on( "mouseleave", selector + " [aria-haspopup]", function( event ) {
+
+	// There is no "mouseenter" in mobile
+	if ( !isMobileMode ) {
+		clearTimeout( globalTimeoutOn );
+		CloseMenuWithDelay( event.currentTarget );
+	}
 } );
+
+$document.on( "focusout", selector + " [aria-haspopup]", function( event ) {
+
+	// Don't close the submenu
+	if ( isMobileMode ) {
+		return;
+	}
+
+	// Don't close it if the user go in the submenu
+	CloseMenuWithDelay( event.currentTarget );
+} );
+
+$document.on( "mouseleave focusout", selector + " [aria-haspopup] + [role=menu]", function( event ) {
+
+	// Collapse the menu
+	// Note: elm.id is already defined because of the mouseenter event
+
+	var elm = event.currentTarget.previousElementSibling;
+
+	if ( elm.dataset.keepExpanded === "md-min" ) {
+		return;
+	}
+
+	// There is no "mouseleave" in mobile
+	if ( isMobileMode ) {
+		return;
+	}
+
+	CloseMenuWithDelay( event.currentTarget );
+} );
+
+
+/* **** Do we need to handle the click??? that will be handled by the "focusin" and "focusout" if something */
+/*
+   Menu current state is...       | Action
+  --------------------------------+------------------
+    Open                          |  Close the menu
+  --------------------------------+------------------
+    Delay to be open              |  Open the menu right now
+  --------------------------------+------------------
+    Short delay after it was open |  Keep the menu open
+  --------------------------------+------------------
+    Close                         |  Open the menu
+  --------------------------------+------------------
+*/
 
 // Open right away the popup
 $document.on( "click", selector + " [aria-haspopup]", function( event ) {
 
 	var elm = event.currentTarget,
 		elmToGiveFocus;
-
-
-	// Don't open the submenu
-	if ( preventFocusIn ) {
-		preventFocusIn = false;
-		return;
-	}
 
 	// Only for mobile view or the menu button
 	if ( isMobileMode || elm.nodeName === "BUTTON" ) {
@@ -3608,19 +3507,6 @@ $document.on( "keydown", selector + " button, " + selector + " [role=menuitem]",
 		parent = currentFocusIsOn.parentElement,
 		grandParent = parent.parentElement,
 		isCurrentButtonMenu = ( currentFocusIsOn.nodeName === "BUTTON" );
-
-	// Close the menu
-	if ( key === "tab" ) {
-		CloseMenu( document.querySelector( selector + " button" ), true );
-		return;
-	}
-
-	// Generate a click it Enter
-	if ( isCurrentButtonMenu && key === "enter" && elm.getAttribute( "aria-expanded" ) === "true" ) {
-		preventFocusIn = true;
-		CloseMenu( elm, true );
-		return;
-	}
 
 	// FIRST CHILD POPOP
 	var firstChildPopup;
@@ -3765,14 +3651,12 @@ $document.on( "keydown", selector + " button, " + selector + " [role=menuitem]",
 		return;
 	}
 
-	if ( key === "left" ||  key === "esc" ) {
-
+	if ( !isCurrentButtonMenu && ( key === "left" ||  key === "esc" ) ) {
 
 		// Close the menu
-		if ( !isCurrentButtonMenu && isMobileMode && elmToGiveFocus.getAttribute( "aria-expanded" ) === "true" ) {
+		if ( isMobileMode &&
+				elmToGiveFocus.getAttribute( "aria-expanded" ) === "true" ) {
 			elmToGiveFocus.setAttribute( "aria-expanded", "false" );
-		} else if ( isCurrentButtonMenu ) {
-			elm.setAttribute( "aria-expanded", "false" );
 		}
 	}
 
